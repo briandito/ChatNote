@@ -1,0 +1,6 @@
+framework module Pods_ChatNoteUITests {
+  umbrella header "Pods-ChatNoteUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

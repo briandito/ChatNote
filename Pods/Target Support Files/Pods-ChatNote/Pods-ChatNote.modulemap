@@ -1,0 +1,6 @@
+framework module Pods_ChatNote {
+  umbrella header "Pods-ChatNote-umbrella.h"
+
+  export *
+  module * { export * }
+}

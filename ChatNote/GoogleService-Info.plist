@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>687610569093-kb83sqkaeb6ef3056jphr2fk6p2r3cfm.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.687610569093-kb83sqkaeb6ef3056jphr2fk6p2r3cfm</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBUG_Pi13s6LHewQ-EfY3j75yujko7xKKY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>687610569093</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>co.briandito.ChatNote</string>
+	<key>PROJECT_ID</key>
+	<string>chatnote-2dcf6</string>
+	<key>STORAGE_BUCKET</key>
+	<string>chatnote-2dcf6.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:687610569093:ios:e72fd9860ef74119</string>
+	<key>DATABASE_URL</key>
+	<string>https://chatnote-2dcf6.firebaseio.com</string>
+</dict>
+</plist>
