@@ -25,31 +25,37 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Lhp-3e-5sk"/>
                                 </connections>
                             </searchBar>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ULe-a8-s9S">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ULe-a8-s9S">
                                 <rect key="frame" x="0.0" y="615" width="375" height="52"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap to take notes..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Myq-Qb-fYx">
-                                        <rect key="frame" x="16" y="11" width="301" height="30"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Send_Button" translatesAutoresizingMaskIntoConstraints="NO" id="2af-a6-N8l">
+                                        <rect key="frame" x="331" y="13" width="26" height="26"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="36" id="DNw-PA-6D8"/>
+                                            <constraint firstAttribute="width" constant="26" id="3n9-5K-hLb"/>
+                                            <constraint firstAttribute="height" constant="26" id="z3G-OL-WDg"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap to take notes..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Myq-Qb-fYx">
+                                        <rect key="frame" x="16" y="8" width="299" height="36"/>
+                                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="pml-Jh-Q50"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Send_Button" translatesAutoresizingMaskIntoConstraints="NO" id="2af-a6-N8l">
-                                        <rect key="frame" x="331" y="13" width="26" height="26"/>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="Myq-Qb-fYx" firstAttribute="top" secondItem="ULe-a8-s9S" secondAttribute="top" constant="8" id="4J0-p3-XuG"/>
-                                    <constraint firstItem="Myq-Qb-fYx" firstAttribute="leading" secondItem="ULe-a8-s9S" secondAttribute="leading" constant="16" id="5lL-DS-5yi"/>
-                                    <constraint firstItem="Myq-Qb-fYx" firstAttribute="leading" secondItem="ULe-a8-s9S" secondAttribute="leading" constant="16" id="B5q-Ic-BH3"/>
-                                    <constraint firstItem="Myq-Qb-fYx" firstAttribute="top" secondItem="ULe-a8-s9S" secondAttribute="top" constant="8" id="Uug-5j-ILQ"/>
-                                    <constraint firstAttribute="bottom" secondItem="Myq-Qb-fYx" secondAttribute="bottom" constant="8" id="sRK-Cg-nST"/>
-                                    <constraint firstAttribute="bottom" secondItem="Myq-Qb-fYx" secondAttribute="bottom" constant="8" id="yfO-Wq-Y6X"/>
-                                    <constraint firstItem="2af-a6-N8l" firstAttribute="leading" secondItem="Myq-Qb-fYx" secondAttribute="trailing" constant="14" id="zbo-r7-nlO"/>
+                                    <constraint firstItem="Myq-Qb-fYx" firstAttribute="top" secondItem="ULe-a8-s9S" secondAttribute="top" constant="8" id="88u-rU-TWa"/>
+                                    <constraint firstAttribute="trailing" secondItem="2af-a6-N8l" secondAttribute="trailing" constant="18" id="Jhp-qb-JGU"/>
+                                    <constraint firstItem="Myq-Qb-fYx" firstAttribute="leading" secondItem="ULe-a8-s9S" secondAttribute="leading" constant="16" id="Nvl-Zj-doU"/>
+                                    <constraint firstItem="2af-a6-N8l" firstAttribute="leading" secondItem="Myq-Qb-fYx" secondAttribute="trailing" constant="16" id="Olz-GF-Kdm"/>
+                                    <constraint firstAttribute="height" constant="52" id="WXe-dO-8aT"/>
+                                    <constraint firstAttribute="bottom" secondItem="Myq-Qb-fYx" secondAttribute="bottom" constant="8" id="gJs-RZ-M7K"/>
+                                    <constraint firstAttribute="bottom" secondItem="2af-a6-N8l" secondAttribute="bottom" constant="13" id="lj1-lJ-ma8"/>
+                                    <constraint firstItem="2af-a6-N8l" firstAttribute="top" secondItem="ULe-a8-s9S" secondAttribute="top" constant="13" id="uF6-GG-zFo"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -57,7 +63,10 @@
                         <constraints>
                             <constraint firstItem="Pa0-vw-r01" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1wX-hK-MSn"/>
                             <constraint firstItem="Pa0-vw-r01" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6tf-3K-heY"/>
+                            <constraint firstItem="ULe-a8-s9S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DTI-t8-vaP"/>
                             <constraint firstItem="Pa0-vw-r01" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="F75-3d-Evb"/>
+                            <constraint firstItem="ULe-a8-s9S" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="WNf-FD-MIT"/>
+                            <constraint firstItem="ULe-a8-s9S" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="c4q-KN-yZ6"/>
                             <constraint firstItem="Pa0-vw-r01" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tNt-Fl-eVZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
