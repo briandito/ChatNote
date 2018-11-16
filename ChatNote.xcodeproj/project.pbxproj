@@ -18,6 +18,8 @@
 		D3B821AD219D014500BD16EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3B821AB219D014500BD16EC /* LaunchScreen.storyboard */; };
 		D3B821B8219D014500BD16EC /* ChatNoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B821B7219D014500BD16EC /* ChatNoteTests.swift */; };
 		D3B821C3219D014500BD16EC /* ChatNoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B821C2219D014500BD16EC /* ChatNoteUITests.swift */; };
+		D3FD4BC4219ECD12008CE4F0 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FD4BC2219ECD12008CE4F0 /* MessageCell.swift */; };
+		D3FD4BC5219ECD12008CE4F0 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3FD4BC3219ECD12008CE4F0 /* MessageCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		D3B821BE219D014500BD16EC /* ChatNoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatNoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B821C2219D014500BD16EC /* ChatNoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatNoteUITests.swift; sourceTree = "<group>"; };
 		D3B821C4219D014500BD16EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3FD4BC2219ECD12008CE4F0 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		D3FD4BC3219ECD12008CE4F0 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		FBE414E8C491E0D7F3DDB1DE /* Pods-ChatNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatNote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatNote/Pods-ChatNote.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +135,8 @@
 				D3B821A6219D014400BD16EC /* Main.storyboard */,
 				D3B821A9219D014500BD16EC /* Assets.xcassets */,
 				D3B821AB219D014500BD16EC /* LaunchScreen.storyboard */,
+				D3FD4BC2219ECD12008CE4F0 /* MessageCell.swift */,
+				D3FD4BC3219ECD12008CE4F0 /* MessageCell.xib */,
 				D3B821AE219D014500BD16EC /* Info.plist */,
 				D31A75AA219D034B005A8D2D /* GoogleService-Info.plist */,
 			);
@@ -276,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3FD4BC5219ECD12008CE4F0 /* MessageCell.xib in Resources */,
 				D3B821AD219D014500BD16EC /* LaunchScreen.storyboard in Resources */,
 				D31A75AB219D034C005A8D2D /* GoogleService-Info.plist in Resources */,
 				D3B821AA219D014500BD16EC /* Assets.xcassets in Resources */,
@@ -401,6 +408,7 @@
 			files = (
 				D3B821A5219D014400BD16EC /* ViewController.swift in Sources */,
 				D3B821A3219D014400BD16EC /* AppDelegate.swift in Sources */,
+				D3FD4BC4219ECD12008CE4F0 /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
