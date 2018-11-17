@@ -13,20 +13,128 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //MARK: declare instance variables
     var messageArray: [Message] = [Message]()
     
-    @IBOutlet var emptyStatePrompt: UIStackView!
-    @IBOutlet var emptyStateButton: UIButton!
+    //MARK: iboutlets links
     @IBOutlet var messageTextField: UITextField!
-    @IBOutlet var sendButton: UIButton!
     @IBOutlet var messageTableView: UITableView!
     @IBOutlet var heightConstraint: NSLayoutConstraint!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //MARK: set controller as delegate and datasource
+        messageTableView.delegate = self
+        messageTableView.dataSource = self
+        
+        //MARK: set controller as the delegate of textfield
+        messageTextField.delegate = self
+        
+        //TODO: Register your MessageCell.xib file here:
+        messageTableView.register(UINib(nibName: "MessageCell", bundle: nil), forCellReuseIdentifier: "customMessageCell")
         
     }
+    
+    /////////////////////////////////////
+    
+    //MARK: Tableview data source methods
+    
+    //TODO: Declare numberOfRowsInSection here:
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messageArray.count
+    }
+    
+    //TODO: declare cellforRowat indexpath
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customMessageCell", for: indexPath) as! MessageCell
+        
+        cell.messageBody.text = messageArray[indexPath.row].messageBody
+        cell.messageDate.text = messageArray[indexPath.row].date
+        
+        return cell
+    }
+    
+    //TODO: Declare configureTableView here:
+    func configureTableView(){
+        messageTableView.rowHeight = UITableView.automaticDimension
+        messageTableView.estimatedRowHeight = 120.0
+    }
+    
+    //TODO: Date and time configurator
+    func getDateAndTime() -> String{
+        
+        var dateAndTime: String = ""
+        
+        // get the current date and time
+        let currentDateTime = Date()
+        
+        // initialize the date formatter and set the style
+        let formatter = DateFormatter()
 
-
+        // "October 8, 2016 at 10:52 PM"
+        formatter.timeStyle = .short
+        formatter.dateStyle = .long
+        dateAndTime = formatter.string(from: currentDateTime)
+        
+        return dateAndTime
+    }
+    
+    //TODO: Declare tableViewTapped here:
+    @objc func tableViewTapped(){
+        messageTextField.endEditing(true)
+    }
+    
+    ///////////////////////////////////////////
+    
+    //MARK:- TextField Delegate Methods
+    
+    
+    //TODO: Declare textFieldDidBeginEditing here:
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        //animation
+        UIView.animate(withDuration: 0.25) {
+            self.heightConstraint.constant = 508
+            self.view.layoutIfNeeded()
+        }
+        
+    }
+    
+    
+    //TODO: Declare textFieldDidEndEditing here:
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        //animation
+        UIView.animate(withDuration: 0.25) {
+            self.heightConstraint.constant = 52
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    ///////////////////////////////////////////
+    
+    
+    //MARK: - Send Message as notes
+    
+    
+    @IBAction func sendPressed(_ sender: Any) {
+        
+        messageTextField.endEditing(true)
+        
+        let message = Message()
+        
+        message.date = getDateAndTime()
+        message.messageBody = messageTextField.text!
+        self.messageArray.append(message)
+        
+        messageTextField.text = ""
+        
+        self.messageArray.append(message)
+        
+        self.configureTableView()
+        self.messageTableView.reloadData()
+        
+    }
 }
 

@@ -43,75 +43,45 @@
                                             <constraint firstAttribute="height" constant="26" id="mNC-dU-dSr"/>
                                         </constraints>
                                         <state key="normal" image="Send_Button"/>
+                                        <connections>
+                                            <action selector="sendPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eon-cL-H6q"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="A12-6O-GnF" firstAttribute="top" secondItem="ULe-a8-s9S" secondAttribute="top" constant="13" id="53W-OV-kwI"/>
                                     <constraint firstItem="Myq-Qb-fYx" firstAttribute="top" secondItem="ULe-a8-s9S" secondAttribute="top" constant="8" id="88u-rU-TWa"/>
-                                    <constraint firstAttribute="bottom" secondItem="A12-6O-GnF" secondAttribute="bottom" constant="13" id="FgW-wo-xe9"/>
                                     <constraint firstItem="A12-6O-GnF" firstAttribute="leading" secondItem="Myq-Qb-fYx" secondAttribute="trailing" constant="8" id="J56-BP-Wjb"/>
                                     <constraint firstItem="Myq-Qb-fYx" firstAttribute="leading" secondItem="ULe-a8-s9S" secondAttribute="leading" constant="16" id="Nvl-Zj-doU"/>
                                     <constraint firstAttribute="trailing" secondItem="A12-6O-GnF" secondAttribute="trailing" constant="12" id="QzF-Rd-YCw"/>
                                     <constraint firstAttribute="height" constant="52" id="WXe-dO-8aT"/>
-                                    <constraint firstAttribute="bottom" secondItem="Myq-Qb-fYx" secondAttribute="bottom" constant="8" id="gJs-RZ-M7K"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MhM-Mg-X0H">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MhM-Mg-X0H">
                                 <rect key="frame" x="0.0" y="20" width="375" height="595"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tAz-b1-niV" userLabel="Empty State">
-                                <rect key="frame" x="77" y="295.5" width="221" height="76"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You haven't taken any notes yet." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMh-8s-Sj4" userLabel="Empty State Info">
-                                        <rect key="frame" x="0.0" y="0.0" width="221" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86z-iL-FSS">
-                                        <rect key="frame" x="31" y="26" width="159" height="50"/>
-                                        <color key="backgroundColor" red="0.19215686274509802" green="0.41960784313725491" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <inset key="contentEdgeInsets" minX="16" minY="16" maxX="16" maxY="16"/>
-                                        <state key="normal" title="Tap to Take Notes">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="76" id="F0X-Fj-RAB"/>
-                                    <constraint firstAttribute="width" constant="221" id="eug-kL-tCx"/>
+                                    <constraint firstAttribute="height" constant="595" id="LJx-Ju-5B4"/>
                                 </constraints>
-                            </stackView>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ULe-a8-s9S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DTI-t8-vaP"/>
-                            <constraint firstItem="tAz-b1-niV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QgT-Rc-lBD"/>
-                            <constraint firstItem="tAz-b1-niV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VLb-32-4Gk"/>
-                            <constraint firstItem="ULe-a8-s9S" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="WNf-FD-MIT"/>
+                            <constraint firstItem="MhM-Mg-X0H" firstAttribute="trailing" secondItem="ULe-a8-s9S" secondAttribute="trailing" id="RR5-hZ-qSc"/>
+                            <constraint firstItem="MhM-Mg-X0H" firstAttribute="leading" secondItem="ULe-a8-s9S" secondAttribute="leading" id="WHL-Uc-7Ad"/>
                             <constraint firstItem="ULe-a8-s9S" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="c4q-KN-yZ6"/>
+                            <constraint firstItem="ULe-a8-s9S" firstAttribute="top" secondItem="MhM-Mg-X0H" secondAttribute="bottom" id="p4G-rq-R3e"/>
+                            <constraint firstItem="MhM-Mg-X0H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pCS-VT-Cbe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="emptyStateButton" destination="86z-iL-FSS" id="Nta-ny-y3Z"/>
-                        <outlet property="emptyStatePrompt" destination="tAz-b1-niV" id="KeX-iN-Bw1"/>
                         <outlet property="heightConstraint" destination="WXe-dO-8aT" id="beH-2H-nf8"/>
                         <outlet property="messageTableView" destination="MhM-Mg-X0H" id="Kfk-st-gk2"/>
                         <outlet property="messageTextField" destination="Myq-Qb-fYx" id="qjR-Vt-P3j"/>
                         <outlet property="searchDisplayController" destination="Ygs-nt-31L" id="aOZ-Kx-INv"/>
-                        <outlet property="sendButton" destination="A12-6O-GnF" id="0ey-oQ-a4Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
