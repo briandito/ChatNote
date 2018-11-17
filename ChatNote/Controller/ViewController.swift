@@ -8,11 +8,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
+    //MARK: declare instance variables
+    var messageArray: [Message] = [Message]()
+    
+    @IBOutlet var emptyStatePrompt: UIStackView!
+    @IBOutlet var emptyStateButton: UIButton!
+    @IBOutlet var messageTextField: UITextField!
+    @IBOutlet var sendButton: UIButton!
+    @IBOutlet var messageTableView: UITableView!
+    @IBOutlet var heightConstraint: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        //MARK: set controller as delegate and datasource
+        
     }
 
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,17 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ULe-a8-s9S" userLabel="Text Input">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ULe-a8-s9S" userLabel="Compose Message">
                                 <rect key="frame" x="0.0" y="615" width="375" height="52"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="sendMessageButton" image="Send_Button" translatesAutoresizingMaskIntoConstraints="NO" id="2af-a6-N8l">
-                                        <rect key="frame" x="337" y="13" width="26" height="26"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="26" id="3n9-5K-hLb"/>
-                                            <constraint firstAttribute="height" constant="26" id="z3G-OL-WDg"/>
-                                        </constraints>
-                                    </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="messageTextField" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tap to take notes..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Myq-Qb-fYx">
+                                    <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="messageTextField" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tap to take notes..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Myq-Qb-fYx" userLabel="Message Field">
                                         <rect key="frame" x="16" y="8" width="313" height="36"/>
                                         <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -43,23 +36,36 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBound" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A12-6O-GnF" userLabel="Send Button">
+                                        <rect key="frame" x="337" y="13" width="26" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="26" id="Xxs-J7-dWi"/>
+                                            <constraint firstAttribute="height" constant="26" id="mNC-dU-dSr"/>
+                                        </constraints>
+                                        <state key="normal" image="Send_Button"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="A12-6O-GnF" firstAttribute="top" secondItem="ULe-a8-s9S" secondAttribute="top" constant="13" id="53W-OV-kwI"/>
                                     <constraint firstItem="Myq-Qb-fYx" firstAttribute="top" secondItem="ULe-a8-s9S" secondAttribute="top" constant="8" id="88u-rU-TWa"/>
+                                    <constraint firstAttribute="bottom" secondItem="A12-6O-GnF" secondAttribute="bottom" constant="13" id="FgW-wo-xe9"/>
+                                    <constraint firstItem="A12-6O-GnF" firstAttribute="leading" secondItem="Myq-Qb-fYx" secondAttribute="trailing" constant="8" id="J56-BP-Wjb"/>
                                     <constraint firstItem="Myq-Qb-fYx" firstAttribute="leading" secondItem="ULe-a8-s9S" secondAttribute="leading" constant="16" id="Nvl-Zj-doU"/>
+                                    <constraint firstAttribute="trailing" secondItem="A12-6O-GnF" secondAttribute="trailing" constant="12" id="QzF-Rd-YCw"/>
                                     <constraint firstAttribute="height" constant="52" id="WXe-dO-8aT"/>
-                                    <constraint firstItem="2af-a6-N8l" firstAttribute="leading" secondItem="Myq-Qb-fYx" secondAttribute="trailing" constant="8" id="e07-AH-qhO"/>
-                                    <constraint firstAttribute="trailing" secondItem="2af-a6-N8l" secondAttribute="trailing" constant="12" id="fAi-GG-0k8"/>
                                     <constraint firstAttribute="bottom" secondItem="Myq-Qb-fYx" secondAttribute="bottom" constant="8" id="gJs-RZ-M7K"/>
-                                    <constraint firstAttribute="bottom" secondItem="2af-a6-N8l" secondAttribute="bottom" constant="13" id="lj1-lJ-ma8"/>
-                                    <constraint firstItem="2af-a6-N8l" firstAttribute="top" secondItem="ULe-a8-s9S" secondAttribute="top" constant="13" id="uF6-GG-zFo"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tAz-b1-niV">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MhM-Mg-X0H">
+                                <rect key="frame" x="0.0" y="20" width="375" height="595"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tAz-b1-niV" userLabel="Empty State">
                                 <rect key="frame" x="77" y="295.5" width="221" height="76"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You haven't taken any notes yet." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMh-8s-Sj4">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You haven't taken any notes yet." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMh-8s-Sj4" userLabel="Empty State Info">
                                         <rect key="frame" x="0.0" y="0.0" width="221" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
@@ -67,8 +73,9 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86z-iL-FSS">
                                         <rect key="frame" x="31" y="26" width="159" height="50"/>
-                                        <color key="backgroundColor" red="0.19215686274509802" green="0.41960784313725491" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.19215686274509802" green="0.41960784313725491" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="contentEdgeInsets" minX="16" minY="16" maxX="16" maxY="16"/>
                                         <state key="normal" title="Tap to Take Notes">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -98,7 +105,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="emptyStateButton" destination="86z-iL-FSS" id="Nta-ny-y3Z"/>
+                        <outlet property="emptyStatePrompt" destination="tAz-b1-niV" id="KeX-iN-Bw1"/>
+                        <outlet property="heightConstraint" destination="WXe-dO-8aT" id="beH-2H-nf8"/>
+                        <outlet property="messageTableView" destination="MhM-Mg-X0H" id="Kfk-st-gk2"/>
+                        <outlet property="messageTextField" destination="Myq-Qb-fYx" id="qjR-Vt-P3j"/>
                         <outlet property="searchDisplayController" destination="Ygs-nt-31L" id="aOZ-Kx-INv"/>
+                        <outlet property="sendButton" destination="A12-6O-GnF" id="0ey-oQ-a4Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
