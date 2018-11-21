@@ -32,16 +32,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //TODO: Register your MessageCell.xib file here:
         messageTableView.register(UINib(nibName: "MessageCell", bundle: nil), forCellReuseIdentifier: "customMessageCell")
         
+        configureTableView()
+        retrieveMessages()
     }
     
     /////////////////////////////////////
     
     //MARK: Tableview data source methods
-    
-    //TODO: Declare numberOfRowsInSection here:
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return messageArray.count
-    }
     
     //TODO: declare cellforRowat indexpath
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -54,13 +51,28 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
+    
+    //TODO: Declare numberOfRowsInSection here:
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return messageArray.count
+    }
+    
+    //TODO: Declare tableViewTapped here:
+    @objc func tableViewTapped(){
+        messageTextField.endEditing(true)
+    }
+    
     //TODO: Declare configureTableView here:
     func configureTableView(){
         messageTableView.rowHeight = UITableView.automaticDimension
         messageTableView.estimatedRowHeight = 120.0
     }
     
-    //TODO: Date and time configurator
+    
+    ///////////////////////////////////////////
+    
+    //MARK: Date and time configurator
     func getDateAndTime() -> String{
         
         var dateAndTime: String = ""
@@ -70,18 +82,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         // initialize the date formatter and set the style
         let formatter = DateFormatter()
-
+        
         // "October 8, 2016 at 10:52 PM"
         formatter.timeStyle = .short
         formatter.dateStyle = .long
         dateAndTime = formatter.string(from: currentDateTime)
         
         return dateAndTime
-    }
-    
-    //TODO: Declare tableViewTapped here:
-    @objc func tableViewTapped(){
-        messageTextField.endEditing(true)
     }
     
     ///////////////////////////////////////////
@@ -118,23 +125,28 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //MARK: - Send Message as notes
     
     
-    @IBAction func sendPressed(_ sender: Any) {
+    @IBAction func sendPressed(_ sender: AnyObject) {
         
         messageTextField.endEditing(true)
         
         let message = Message()
-        
+
         message.date = getDateAndTime()
         message.messageBody = messageTextField.text!
-        self.messageArray.append(message)
         
+        print(message.date)
+        print(message.messageBody)
+        
+        self.messageArray.append(message)
+        print(messageArray.last?.messageBody)
         messageTextField.text = ""
+    }
+    
+    //MARK: Create the retrieveMessages method here:
+    
+    func retrieveMessages(){
         
-        self.messageArray.append(message)
-        
-        self.configureTableView()
-        self.messageTableView.reloadData()
-        
+        configureTableView()
+        messageTableView.reloadData()
     }
 }
-

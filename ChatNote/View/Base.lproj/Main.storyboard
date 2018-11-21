@@ -20,7 +20,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ULe-a8-s9S" userLabel="Compose Message">
                                 <rect key="frame" x="0.0" y="615" width="375" height="52"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="messageTextField" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tap to take notes..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Myq-Qb-fYx" userLabel="Message Field">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tap to take notes..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Myq-Qb-fYx" userLabel="Message Field">
                                         <rect key="frame" x="16" y="8" width="313" height="36"/>
                                         <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -44,7 +44,7 @@
                                         </constraints>
                                         <state key="normal" image="Send_Button"/>
                                         <connections>
-                                            <action selector="sendPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eon-cL-H6q"/>
+                                            <action selector="sendPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ff5-Dd-eNZ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -64,6 +64,16 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="595" id="LJx-Ju-5B4"/>
                                 </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" id="o4D-wy-1jF">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o4D-wy-1jF" id="8aW-fL-YoT">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -78,8 +88,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="heightConstraint" destination="WXe-dO-8aT" id="beH-2H-nf8"/>
-                        <outlet property="messageTableView" destination="MhM-Mg-X0H" id="Kfk-st-gk2"/>
+                        <outlet property="heightConstraint" destination="WXe-dO-8aT" id="Ty9-Lv-ceF"/>
+                        <outlet property="messageTableView" destination="MhM-Mg-X0H" id="Fkb-PN-53t"/>
                         <outlet property="messageTextField" destination="Myq-Qb-fYx" id="qjR-Vt-P3j"/>
                         <outlet property="searchDisplayController" destination="Ygs-nt-31L" id="aOZ-Kx-INv"/>
                     </connections>
