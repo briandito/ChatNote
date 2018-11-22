@@ -12,6 +12,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     //MARK: declare instance variables
     var messageArray: [Message] = [Message]()
+
+    var activeField: UITextField?
+    var lastOffset: CGPoint!
+    var keyboardHeight: CGFloat!
     
     //MARK: iboutlets links
     @IBOutlet var messageTextField: UITextField!
@@ -21,6 +25,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        // Observe keyboard change
+//        NotificationCenter.default.addObserver(
+//            self,
+//            selector: #selector(keyboardWillShow),
+//            name: UIResponder.keyboardWillShowNotification,
+//            object: nil
+//        )
         
         //MARK: set controller as delegate and datasource
         messageTableView.delegate = self
@@ -98,27 +111,49 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     //TODO: Declare textFieldDidBeginEditing here:
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField){
         
-        //animation
-        UIView.animate(withDuration: 0.25) {
-            self.heightConstraint.constant = 508
-            self.view.layoutIfNeeded()
-        }
+//        //animation
+//        UIView.animate(withDuration: 0.25) {
+//            self.heightConstraint.constant = 308
+//            self.view.layoutIfNeeded()
+//        }
         
     }
     
     
     //TODO: Declare textFieldDidEndEditing here:
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    func textFieldDidEndEditing(_ textField: UITextField){
         
-        //animation
-        UIView.animate(withDuration: 0.25) {
-            self.heightConstraint.constant = 52
-            self.view.layoutIfNeeded()
-        }
+//        //animation
+//        UIView.animate(withDuration: 0.25) {
+//            self.heightConstraint.constant = 52
+//            self.view.layoutIfNeeded()
+//        }
+
     }
     
+    
+    
+    
+//    func bindToKeyboard(){
+//        NotificationCenter.default.addObserver(
+//            self,
+//            selector: #selector(keyboardWillShow),
+//            name: UIResponder.keyboardWillShowNotification,
+//            object: nil
+//        )
+//    }
+//
+//    @objc func keyboardWillShow(_ notification: Notification) {
+//        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+//            let keyboardRectangle = keyboardFrame.cgRectValue
+//            heightConstraint.constant = keyboardRectangle.height
+//            view.layoutIfNeeded()
+//        }
+//    }
+//
     ///////////////////////////////////////////
     
     

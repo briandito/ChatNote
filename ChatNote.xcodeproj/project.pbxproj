@@ -127,8 +127,8 @@
 		0AEAE33521A000D0003A5711 /* Custom Cell */ = {
 			isa = PBXGroup;
 			children = (
-				D3FD4BC3219ECD12008CE4F0 /* MessageCell.xib */,
 				D3FD4BC2219ECD12008CE4F0 /* MessageCell.swift */,
+				D3FD4BC3219ECD12008CE4F0 /* MessageCell.xib */,
 			);
 			path = "Custom Cell";
 			sourceTree = "<group>";
