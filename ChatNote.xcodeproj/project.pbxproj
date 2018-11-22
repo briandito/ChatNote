@@ -127,8 +127,8 @@
 		0AEAE33521A000D0003A5711 /* Custom Cell */ = {
 			isa = PBXGroup;
 			children = (
-				D3FD4BC3219ECD12008CE4F0 /* MessageCell.xib */,
 				D3FD4BC2219ECD12008CE4F0 /* MessageCell.swift */,
+				D3FD4BC3219ECD12008CE4F0 /* MessageCell.xib */,
 			);
 			path = "Custom Cell";
 			sourceTree = "<group>";
@@ -664,6 +664,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EDE8FANUL2;
 				INFOPLIST_FILE = ChatNoteTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -686,6 +687,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EDE8FANUL2;
 				INFOPLIST_FILE = ChatNoteTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -707,6 +709,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EDE8FANUL2;
 				INFOPLIST_FILE = ChatNoteUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -728,6 +731,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EDE8FANUL2;
 				INFOPLIST_FILE = ChatNoteUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
