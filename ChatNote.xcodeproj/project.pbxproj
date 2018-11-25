@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AD3A21821AA63870034505B /* newMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3A21621AA63870034505B /* newMessageCell.swift */; };
+		0AD3A21921AA63870034505B /* newMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD3A21721AA63870034505B /* newMessageCell.xib */; };
 		0AEAE33721A000E5003A5711 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEAE33621A000E5003A5711 /* Message.swift */; };
 		39C06EE79D5D93D245CF610F /* Pods_ChatNoteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807FF94E5792831A32AB2F68 /* Pods_ChatNoteUITests.framework */; };
 		4AE11B80C500D70F7EF7FCAC /* Pods_ChatNote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F30275A14212CF865F8E35 /* Pods_ChatNote.framework */; };
@@ -18,8 +20,6 @@
 		D3B821AD219D014500BD16EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3B821AB219D014500BD16EC /* LaunchScreen.storyboard */; };
 		D3B821B8219D014500BD16EC /* ChatNoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B821B7219D014500BD16EC /* ChatNoteTests.swift */; };
 		D3B821C3219D014500BD16EC /* ChatNoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B821C2219D014500BD16EC /* ChatNoteUITests.swift */; };
-		D3FD4BC4219ECD12008CE4F0 /* customMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FD4BC2219ECD12008CE4F0 /* customMessageCell.swift */; };
-		D3FD4BC5219ECD12008CE4F0 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3FD4BC3219ECD12008CE4F0 /* MessageCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AD3A21621AA63870034505B /* newMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newMessageCell.swift; sourceTree = "<group>"; };
+		0AD3A21721AA63870034505B /* newMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = newMessageCell.xib; sourceTree = "<group>"; };
 		0AEAE33621A000E5003A5711 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		16F30275A14212CF865F8E35 /* Pods_ChatNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A05106F7263FB47802DEC65 /* Pods-ChatNoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatNoteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatNoteTests/Pods-ChatNoteTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -62,8 +64,6 @@
 		D3B821BE219D014500BD16EC /* ChatNoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatNoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B821C2219D014500BD16EC /* ChatNoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatNoteUITests.swift; sourceTree = "<group>"; };
 		D3B821C4219D014500BD16EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D3FD4BC2219ECD12008CE4F0 /* customMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customMessageCell.swift; sourceTree = "<group>"; };
-		D3FD4BC3219ECD12008CE4F0 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		FBE414E8C491E0D7F3DDB1DE /* Pods-ChatNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatNote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatNote/Pods-ChatNote.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,8 +125,8 @@
 		0AEAE33521A000D0003A5711 /* Custom Cell */ = {
 			isa = PBXGroup;
 			children = (
-				D3FD4BC2219ECD12008CE4F0 /* customMessageCell.swift */,
-				D3FD4BC3219ECD12008CE4F0 /* MessageCell.xib */,
+				0AD3A21621AA63870034505B /* newMessageCell.swift */,
+				0AD3A21721AA63870034505B /* newMessageCell.xib */,
 			);
 			path = "Custom Cell";
 			sourceTree = "<group>";
@@ -313,8 +313,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3FD4BC5219ECD12008CE4F0 /* MessageCell.xib in Resources */,
 				D3B821AD219D014500BD16EC /* LaunchScreen.storyboard in Resources */,
+				0AD3A21921AA63870034505B /* newMessageCell.xib in Resources */,
 				D3B821AA219D014500BD16EC /* Assets.xcassets in Resources */,
 				D3B821A8219D014400BD16EC /* Main.storyboard in Resources */,
 			);
@@ -412,8 +412,8 @@
 			files = (
 				D3B821A5219D014400BD16EC /* ViewController.swift in Sources */,
 				0AEAE33721A000E5003A5711 /* Message.swift in Sources */,
+				0AD3A21821AA63870034505B /* newMessageCell.swift in Sources */,
 				D3B821A3219D014400BD16EC /* AppDelegate.swift in Sources */,
-				D3FD4BC4219ECD12008CE4F0 /* customMessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

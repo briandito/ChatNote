@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
     //MARK: declare instance variables
-    var messageArray: [Message] = [Message]()
+//    var messageArray: [Message] = [Message]()
 
     var activeField: UITextField?
     var lastOffset: CGPoint!
@@ -43,10 +43,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         messageTextField.delegate = self
         
         //TODO: Register your MessageCell.xib file here:
-        messageTableView.register(UINib(nibName: "MessageCell", bundle: nil), forCellReuseIdentifier: "customMessageCell")
+        messageTableView.register(UINib(nibName: "newMessageCell", bundle: nil), forCellReuseIdentifier: "newMessageCell")
         
         configureTableView()
         retrieveMessages()
+        
+        
+        messageTableView.separatorStyle = .none
     }
     
     /////////////////////////////////////
@@ -56,10 +59,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //TODO: declare cellforRowat indexpath
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "customMessageCell", for: indexPath) as! customMessageCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "newMessageCell", for: indexPath) as! newMessageCell
         
-        cell.messageBody.text = messageArray[indexPath.row].messageBody
-        cell.messageDate.text = messageArray[indexPath.row].date
+        let messageArray = ["first message", "kezia balobo", "third message"]
+        
+        cell.newMessageBody.text = messageArray[indexPath.row]
         
         return cell
     }
@@ -68,7 +72,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //TODO: Declare numberOfRowsInSection here:
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return messageArray.count
+//        return messageArray.count
+        return 3
     }
     
     //TODO: Declare tableViewTapped here:
@@ -172,14 +177,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         print(message.date)
         print(message.messageBody)
         
-        self.messageArray.append(message)
-        print(messageArray.last?.messageBody)
+//        self.messageArray.append(message)
+//        print(messageArray.last?.messageBody)
         messageTextField.text = ""
     }
     
     //MARK: Create the retrieveMessages method here:
     
     func retrieveMessages(){
+        
         
         configureTableView()
         messageTableView.reloadData()
