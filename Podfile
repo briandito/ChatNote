@@ -5,8 +5,6 @@ target 'ChatNote' do
   use_frameworks!
 
   # Pods for ChatNote
-pod 'Firebase'
-pod 'Firebase/Auth'
 
   target 'ChatNoteTests' do
     inherit! :search_paths
