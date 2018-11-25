@@ -26,15 +26,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        // Observe keyboard change
-//        NotificationCenter.default.addObserver(
-//            self,
-//            selector: #selector(keyboardWillShow),
-//            name: UIResponder.keyboardWillShowNotification,
-//            object: nil
-//        )
-        
         //MARK: set controller as delegate and datasource
         messageTableView.delegate = self
         messageTableView.dataSource = self
@@ -48,7 +39,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         configureTableView()
         retrieveMessages()
         
-        
+        //MARK: Table UI fixes
         messageTableView.separatorStyle = .none
     }
     
@@ -61,9 +52,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "newMessageCell", for: indexPath) as! newMessageCell
         
-        let messageArray = ["first message", "kezia balobo", "third message"]
+        let messageArray = ["When a customer is having a haircut, some shops might have these small screens which shows ads, tv shows, or the shop's own commercial videos. How can we entertain her/him for at least 10 minutes using this small screen? How can we make the experience delightful and enjoyable in the 10 minutes window?", "ut, some shops might have these small screens which shows ads, tv shows, or the shop's own commercial videos. How can we entertain her/him for kezia balobo", "third meis small screen? How  ssage"]
         
+        cell.newMessageDate.text = getDateAndTime()
         cell.newMessageBody.text = messageArray[indexPath.row]
+        
+        //MARK: set line height
+        let paragraphStyle = NSMutableParagraphStyle()
+        
+        //line height size
+        paragraphStyle.lineSpacing = 3
+        let attrString = NSMutableAttributedString(string: cell.newMessageBody.text!)
+        attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attrString.length))
+        cell.newMessageBody.attributedText = attrString
         
         return cell
     }
@@ -72,7 +73,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //TODO: Declare numberOfRowsInSection here:
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-//        return messageArray.count
+//      return messageArray.count
         return 3
     }
     
@@ -139,26 +140,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     }
     
-    
-    
-    
-//    func bindToKeyboard(){
-//        NotificationCenter.default.addObserver(
-//            self,
-//            selector: #selector(keyboardWillShow),
-//            name: UIResponder.keyboardWillShowNotification,
-//            object: nil
-//        )
-//    }
-//
-//    @objc func keyboardWillShow(_ notification: Notification) {
-//        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-//            let keyboardRectangle = keyboardFrame.cgRectValue
-//            heightConstraint.constant = keyboardRectangle.height
-//            view.layoutIfNeeded()
-//        }
-//    }
-//
     ///////////////////////////////////////////
     
     
@@ -179,6 +160,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
 //        self.messageArray.append(message)
 //        print(messageArray.last?.messageBody)
+        
         messageTextField.text = ""
     }
     
@@ -191,3 +173,4 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         messageTableView.reloadData()
     }
 }
+

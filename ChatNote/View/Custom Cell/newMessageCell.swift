@@ -11,9 +11,18 @@ import UIKit
 class newMessageCell: UITableViewCell {
     @IBOutlet var newMessageBody: UILabel!
     
+    @IBOutlet var newMessageDate: UILabel!
+    
+    @IBOutlet var newMessageBackground: UIView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        //set bg color of the notes
+        newMessageBackground.layer.borderWidth = 1
+        newMessageBackground.layer.borderColor = UIColor(red:222/255, green:225/255, blue:227/255, alpha: 1).cgColor
+
     }
     
 }
