@@ -7,30 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		21D2DBD5590B26A4777C6493C8ED8EA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		0032740324D36EDEFB14C90DFA9347C4 /* Pods-ChatNote-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D08569BD9D224E4A2ACF1819B7872061 /* Pods-ChatNote-dummy.m */; };
+		01BE01C2AA958642BCE6DF8D2DD90B03 /* KeyboardWrapper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CD7AA3688E778675E5E0BCD8586BDD3 /* KeyboardWrapper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21CDF05981B0FEE6AFEB5D85F56D2A2D /* KeyboardWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28475E9E9FBF0AE59CEC6171AE44DD /* KeyboardWrapper.swift */; };
+		21D2DBD5590B26A4777C6493C8ED8EA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EFB40531CB700ADF867FEEE78561E78 /* Foundation.framework */; };
 		314E7761ABE1D9CDC5E443A6F2B55F8C /* Pods-ChatNoteTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 63355903C6A86E5133B6FB68D9866E1F /* Pods-ChatNoteTests-dummy.m */; };
-		76EC6B5F5D6FB312FEEA19299A8BBC6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		851624FA21EE4BB8EF5BD58F4433D065 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		621359AA3235614E2CEE3C1A763FE7FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EFB40531CB700ADF867FEEE78561E78 /* Foundation.framework */; };
+		669E9AE61F7A69EE500753C3ECD4673E /* Pods-ChatNote-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B103496847ACBBC10F9B1E80A5C82789 /* Pods-ChatNote-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76EC6B5F5D6FB312FEEA19299A8BBC6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EFB40531CB700ADF867FEEE78561E78 /* Foundation.framework */; };
+		786E174CB35C8A8D8E6FF34D5C45C8C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E404AA6957590324067E330E0EC533 /* UIKit.framework */; };
 		8FB0AFC2ED1C5E9E9F0E23D440DAE51E /* Pods-ChatNoteUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE873F69D2338434294A93FA13AC043 /* Pods-ChatNoteUITests-dummy.m */; };
-		9CA2CF0DD450292766430B8B14FB6BD2 /* Pods-ChatNote-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D08569BD9D224E4A2ACF1819B7872061 /* Pods-ChatNote-dummy.m */; };
-		BE5FA7B6891ECF2788FF2EC96F63B990 /* Pods-ChatNote-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B103496847ACBBC10F9B1E80A5C82789 /* Pods-ChatNote-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B34B1B84CA8FA7861216CD726AA094A5 /* KeyboardWrapper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB8E66C578B203532CF206944664E9A /* KeyboardWrapper-dummy.m */; };
 		C14FC9B5241B92F16E709061DA31F46F /* Pods-ChatNoteUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AD678ADCE68A0624B4754B6EA60EA5C6 /* Pods-ChatNoteUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E0CB3EB67E2C28A5E6FABED85D675A99 /* Pods-ChatNoteTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 15C31F8CA60EA4A6545AA474E970324E /* Pods-ChatNoteTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F07EF207260D0470BBB9A2CDAA6241B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EFB40531CB700ADF867FEEE78561E78 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		01A3D0331386AEB3859B4286526046E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5CCAD385628B901C38E8267F20968D16;
+			remoteInfo = KeyboardWrapper;
+		};
 		9924748A44CD74E57627E701B73343F3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 88D8476FD74675F6CBF2AE93164D2A39;
+			remoteGlobalIDString = 7B6A37FFFA90E95013FF2FA94C8A6768;
 			remoteInfo = "Pods-ChatNote";
 		};
 		D4E62BF55970E419CEF8D330AD63B329 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 88D8476FD74675F6CBF2AE93164D2A39;
+			remoteGlobalIDString = 7B6A37FFFA90E95013FF2FA94C8A6768;
 			remoteInfo = "Pods-ChatNote";
 		};
 /* End PBXContainerItemProxy section */
@@ -40,33 +52,42 @@
 		10511E2DB34712355AC0E49A77DE5A15 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15C31F8CA60EA4A6545AA474E970324E /* Pods-ChatNoteTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ChatNoteTests-umbrella.h"; sourceTree = "<group>"; };
 		16FBECD56C96EBA2B9416CFC3F6C1753 /* Pods-ChatNoteUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ChatNoteUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1B2EF56D597C1C79B46724A6B3B38B80 /* Pods_ChatNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ChatNote.framework; path = "Pods-ChatNote.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2EA300671B09FA1551ACDA5709FBB9D8 /* Pods_ChatNoteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ChatNoteUITests.framework; path = "Pods-ChatNoteUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		17F23B117793B3E73017BF55E9B62D04 /* KeyboardWrapper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KeyboardWrapper.xcconfig; sourceTree = "<group>"; };
+		1BE272858E5CF53F873DB0C8936F6B69 /* Pods_ChatNoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ChatNoteTests.framework; path = "Pods-ChatNoteTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AB8E66C578B203532CF206944664E9A /* KeyboardWrapper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KeyboardWrapper-dummy.m"; sourceTree = "<group>"; };
+		2EFB40531CB700ADF867FEEE78561E78 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		2FD163B6B9F96CA06B166F35FC9F07EB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		408A54B5E7DD88828D273035211FE317 /* Pods-ChatNoteTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ChatNoteTests-resources.sh"; sourceTree = "<group>"; };
 		44ABCDE2A5AA503D13AE815699A71F69 /* Pods-ChatNote-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ChatNote-resources.sh"; sourceTree = "<group>"; };
+		49CFCAAA07772CC814E25EA0322CB749 /* Pods_ChatNoteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ChatNoteUITests.framework; path = "Pods-ChatNoteUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CD7AA3688E778675E5E0BCD8586BDD3 /* KeyboardWrapper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeyboardWrapper-umbrella.h"; sourceTree = "<group>"; };
+		4CE67B807C1733471901EF03B99B1870 /* KeyboardWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KeyboardWrapper.framework; path = KeyboardWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50862C93D8A6BABBB870A59E2EB946C5 /* Pods-ChatNote-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChatNote-acknowledgements.plist"; sourceTree = "<group>"; };
+		5AC35BCFB0A88E59CD2E57EF8979A1B7 /* KeyboardWrapper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeyboardWrapper-prefix.pch"; sourceTree = "<group>"; };
 		5F9D2166C54A0393C0DC4339C74C5DA8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63355903C6A86E5133B6FB68D9866E1F /* Pods-ChatNoteTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ChatNoteTests-dummy.m"; sourceTree = "<group>"; };
 		6421F6CAD0065B750D2BF4D353463599 /* Pods-ChatNoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChatNoteTests.debug.xcconfig"; sourceTree = "<group>"; };
 		68E8412AEB0CBFA34D7E797C004A821E /* Pods-ChatNoteTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ChatNoteTests.modulemap"; sourceTree = "<group>"; };
 		7172C01FE43A6735ACC66C43EAF2F77E /* Pods-ChatNoteUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ChatNoteUITests-resources.sh"; sourceTree = "<group>"; };
+		74E404AA6957590324067E330E0EC533 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		7560F1BDC5BB3E8172D4CB9D8B5DD77C /* Pods-ChatNoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChatNoteTests.release.xcconfig"; sourceTree = "<group>"; };
 		7835F43D7837493AA52837E1EB256EE0 /* Pods-ChatNote.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ChatNote.modulemap"; sourceTree = "<group>"; };
 		869730FF449A8534AC3B712513C3F6A5 /* Pods-ChatNoteTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ChatNoteTests-frameworks.sh"; sourceTree = "<group>"; };
+		86B69657135C82090E71BFF7D068594D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AC28475E9E9FBF0AE59CEC6171AE44DD /* KeyboardWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardWrapper.swift; path = Pod/Classes/KeyboardWrapper.swift; sourceTree = "<group>"; };
 		AD678ADCE68A0624B4754B6EA60EA5C6 /* Pods-ChatNoteUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ChatNoteUITests-umbrella.h"; sourceTree = "<group>"; };
 		AE0F6A439B4913A31AD2A69D81E9A0D1 /* Pods-ChatNoteTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ChatNoteTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B103496847ACBBC10F9B1E80A5C82789 /* Pods-ChatNote-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ChatNote-umbrella.h"; sourceTree = "<group>"; };
-		B50C4CC88C88879B88BA3033B1A12D73 /* Pods_ChatNoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ChatNoteTests.framework; path = "Pods-ChatNoteTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7F2B46CB961E1D483565D07E764CF5 /* Pods-ChatNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChatNote.release.xcconfig"; sourceTree = "<group>"; };
 		C1036BE53BDE8644B2DCD0B435749A2A /* Pods-ChatNoteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChatNoteUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C4639E647DB66FFD5075DE5A726EC704 /* Pods-ChatNoteTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChatNoteTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		CF6BE676F238B3A8D0E0EC4A88CAA71A /* Pods-ChatNote-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ChatNote-frameworks.sh"; sourceTree = "<group>"; };
 		D08569BD9D224E4A2ACF1819B7872061 /* Pods-ChatNote-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ChatNote-dummy.m"; sourceTree = "<group>"; };
-		D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		DBE873F69D2338434294A93FA13AC043 /* Pods-ChatNoteUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ChatNoteUITests-dummy.m"; sourceTree = "<group>"; };
 		E0B41BDF5B46C0AB45A5CD3161F6F124 /* Pods-ChatNoteUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ChatNoteUITests-frameworks.sh"; sourceTree = "<group>"; };
+		E661E8446378A5A82AEF8FCB5C93255C /* KeyboardWrapper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KeyboardWrapper.modulemap; sourceTree = "<group>"; };
+		E6651BB28E8BE62AF9E2349EC9C1A82A /* Pods_ChatNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ChatNote.framework; path = "Pods-ChatNote.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0F75429B9426191175677CCC149EA86 /* Pods-ChatNoteUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChatNoteUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		F71890FE8391396E8DAB7FC82D7C07FB /* Pods-ChatNoteUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ChatNoteUITests.modulemap"; sourceTree = "<group>"; };
 		FC54ECA36D3F599F2CA5EB279E42A86B /* Pods-ChatNoteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChatNoteUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,11 +95,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		56972BFE8E856BCD3D2DE513CCB5C0B2 /* Frameworks */ = {
+		4DC7F829E14B005EA5A6963DB2E23BAB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				851624FA21EE4BB8EF5BD58F4433D065 /* Foundation.framework in Frameworks */,
+				F07EF207260D0470BBB9A2CDAA6241B4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DB82825DED3104A5B0C8970B8792D96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				621359AA3235614E2CEE3C1A763FE7FE /* Foundation.framework in Frameworks */,
+				786E174CB35C8A8D8E6FF34D5C45C8C8 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,12 +149,21 @@
 			path = "Target Support Files/Pods-ChatNoteTests";
 			sourceTree = "<group>";
 		};
-		44D5347904CF754D6785B84253F2574A /* iOS */ = {
+		06CDD10DE71306278CF89108B3036DFD /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */,
+				2EFB40531CB700ADF867FEEE78561E78 /* Foundation.framework */,
+				74E404AA6957590324067E330E0EC533 /* UIKit.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06CDD10DE71306278CF89108B3036DFD /* iOS */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		493E421DC0A07E013A1698160774D35A /* Pods-ChatNoteUITests */ = {
@@ -145,32 +184,58 @@
 			path = "Target Support Files/Pods-ChatNoteUITests";
 			sourceTree = "<group>";
 		};
+		611E04D7D0B6CE8059C689F11C294654 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				919F34DD8C0F985E624ADD3E26126C41 /* KeyboardWrapper */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				D613034D3E7F3E7D8D8B1A0707487914 /* Products */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				611E04D7D0B6CE8059C689F11C294654 /* Pods */,
+				93AE030930A361CB7B219E9E93078D60 /* Products */,
 				DF9E39A2D29E4827AF4DEBB4B95B0A4D /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		919F34DD8C0F985E624ADD3E26126C41 /* KeyboardWrapper */ = {
 			isa = PBXGroup;
 			children = (
-				44D5347904CF754D6785B84253F2574A /* iOS */,
+				AC28475E9E9FBF0AE59CEC6171AE44DD /* KeyboardWrapper.swift */,
+				C5C036A714047D5622043B031D7BF69A /* Support Files */,
 			);
-			name = Frameworks;
+			name = KeyboardWrapper;
+			path = KeyboardWrapper;
 			sourceTree = "<group>";
 		};
-		D613034D3E7F3E7D8D8B1A0707487914 /* Products */ = {
+		93AE030930A361CB7B219E9E93078D60 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1B2EF56D597C1C79B46724A6B3B38B80 /* Pods_ChatNote.framework */,
-				B50C4CC88C88879B88BA3033B1A12D73 /* Pods_ChatNoteTests.framework */,
-				2EA300671B09FA1551ACDA5709FBB9D8 /* Pods_ChatNoteUITests.framework */,
+				4CE67B807C1733471901EF03B99B1870 /* KeyboardWrapper.framework */,
+				E6651BB28E8BE62AF9E2349EC9C1A82A /* Pods_ChatNote.framework */,
+				1BE272858E5CF53F873DB0C8936F6B69 /* Pods_ChatNoteTests.framework */,
+				49CFCAAA07772CC814E25EA0322CB749 /* Pods_ChatNoteUITests.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C5C036A714047D5622043B031D7BF69A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				86B69657135C82090E71BFF7D068594D /* Info.plist */,
+				E661E8446378A5A82AEF8FCB5C93255C /* KeyboardWrapper.modulemap */,
+				17F23B117793B3E73017BF55E9B62D04 /* KeyboardWrapper.xcconfig */,
+				2AB8E66C578B203532CF206944664E9A /* KeyboardWrapper-dummy.m */,
+				5AC35BCFB0A88E59CD2E57EF8979A1B7 /* KeyboardWrapper-prefix.pch */,
+				4CD7AA3688E778675E5E0BCD8586BDD3 /* KeyboardWrapper-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/KeyboardWrapper";
 			sourceTree = "<group>";
 		};
 		DF9E39A2D29E4827AF4DEBB4B95B0A4D /* Targets Support Files */ = {
@@ -204,11 +269,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1AD9144E51DAC0437364F4411EC18C19 /* Headers */ = {
+		49DBA9A929420AC26EA56C017C1BE673 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE5FA7B6891ECF2788FF2EC96F63B990 /* Pods-ChatNote-umbrella.h in Headers */,
+				01BE01C2AA958642BCE6DF8D2DD90B03 /* KeyboardWrapper-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A017D10514633A14A52A9B87C84AF48 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				669E9AE61F7A69EE500753C3ECD4673E /* Pods-ChatNote-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,25 +320,44 @@
 			);
 			name = "Pods-ChatNoteTests";
 			productName = "Pods-ChatNoteTests";
-			productReference = B50C4CC88C88879B88BA3033B1A12D73 /* Pods_ChatNoteTests.framework */;
+			productReference = 1BE272858E5CF53F873DB0C8936F6B69 /* Pods_ChatNoteTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		88D8476FD74675F6CBF2AE93164D2A39 /* Pods-ChatNote */ = {
+		5CCAD385628B901C38E8267F20968D16 /* KeyboardWrapper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 48F364EFC660934F7A20F7CD7491D73B /* Build configuration list for PBXNativeTarget "Pods-ChatNote" */;
+			buildConfigurationList = 9A1C3C387845161537010BAE06E9ED24 /* Build configuration list for PBXNativeTarget "KeyboardWrapper" */;
 			buildPhases = (
-				1AD9144E51DAC0437364F4411EC18C19 /* Headers */,
-				42EFFCA587665D4F0FC03A8CDE405085 /* Sources */,
-				56972BFE8E856BCD3D2DE513CCB5C0B2 /* Frameworks */,
-				56B2FDB0ED72DF3AD9903ACA61FCB7AE /* Resources */,
+				49DBA9A929420AC26EA56C017C1BE673 /* Headers */,
+				D1572707E49D88B9F24F77B5DCDB3B2B /* Sources */,
+				7DB82825DED3104A5B0C8970B8792D96 /* Frameworks */,
+				A965954F725F9FAD8A5206FD8BBE6EB2 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
+			name = KeyboardWrapper;
+			productName = KeyboardWrapper;
+			productReference = 4CE67B807C1733471901EF03B99B1870 /* KeyboardWrapper.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7B6A37FFFA90E95013FF2FA94C8A6768 /* Pods-ChatNote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E26ED9DD461E9000B109700200040545 /* Build configuration list for PBXNativeTarget "Pods-ChatNote" */;
+			buildPhases = (
+				7A017D10514633A14A52A9B87C84AF48 /* Headers */,
+				06D22C47098F241DFE9F7492BB0FF3C5 /* Sources */,
+				4DC7F829E14B005EA5A6963DB2E23BAB /* Frameworks */,
+				4E3555AD81123DE2F2CAFA9FD76F5BCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8DBA9B929C31BDD604827E5852BB444E /* PBXTargetDependency */,
+			);
 			name = "Pods-ChatNote";
 			productName = "Pods-ChatNote";
-			productReference = 1B2EF56D597C1C79B46724A6B3B38B80 /* Pods_ChatNote.framework */;
+			productReference = E6651BB28E8BE62AF9E2349EC9C1A82A /* Pods_ChatNote.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		A7077B8912292EE9E16D5A6DDBF4CBF8 /* Pods-ChatNoteUITests */ = {
@@ -284,7 +376,7 @@
 			);
 			name = "Pods-ChatNoteUITests";
 			productName = "Pods-ChatNoteUITests";
-			productReference = 2EA300671B09FA1551ACDA5709FBB9D8 /* Pods_ChatNoteUITests.framework */;
+			productReference = 49CFCAAA07772CC814E25EA0322CB749 /* Pods_ChatNoteUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -304,11 +396,12 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = D613034D3E7F3E7D8D8B1A0707487914 /* Products */;
+			productRefGroup = 93AE030930A361CB7B219E9E93078D60 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				88D8476FD74675F6CBF2AE93164D2A39 /* Pods-ChatNote */,
+				5CCAD385628B901C38E8267F20968D16 /* KeyboardWrapper */,
+				7B6A37FFFA90E95013FF2FA94C8A6768 /* Pods-ChatNote */,
 				1BCA358DF3BDEE7D51888568F47649DC /* Pods-ChatNoteTests */,
 				A7077B8912292EE9E16D5A6DDBF4CBF8 /* Pods-ChatNoteUITests */,
 			);
@@ -316,7 +409,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		56B2FDB0ED72DF3AD9903ACA61FCB7AE /* Resources */ = {
+		4E3555AD81123DE2F2CAFA9FD76F5BCD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -337,14 +430,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A965954F725F9FAD8A5206FD8BBE6EB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		42EFFCA587665D4F0FC03A8CDE405085 /* Sources */ = {
+		06D22C47098F241DFE9F7492BB0FF3C5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CA2CF0DD450292766430B8B14FB6BD2 /* Pods-ChatNote-dummy.m in Sources */,
+				0032740324D36EDEFB14C90DFA9347C4 /* Pods-ChatNote-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +453,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				314E7761ABE1D9CDC5E443A6F2B55F8C /* Pods-ChatNoteTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1572707E49D88B9F24F77B5DCDB3B2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B34B1B84CA8FA7861216CD726AA094A5 /* KeyboardWrapper-dummy.m in Sources */,
+				21CDF05981B0FEE6AFEB5D85F56D2A2D /* KeyboardWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,18 +479,61 @@
 		24878C81400233CFF4802A27FADC28BB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-ChatNote";
-			target = 88D8476FD74675F6CBF2AE93164D2A39 /* Pods-ChatNote */;
+			target = 7B6A37FFFA90E95013FF2FA94C8A6768 /* Pods-ChatNote */;
 			targetProxy = D4E62BF55970E419CEF8D330AD63B329 /* PBXContainerItemProxy */;
+		};
+		8DBA9B929C31BDD604827E5852BB444E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KeyboardWrapper;
+			target = 5CCAD385628B901C38E8267F20968D16 /* KeyboardWrapper */;
+			targetProxy = 01A3D0331386AEB3859B4286526046E4 /* PBXContainerItemProxy */;
 		};
 		CE2FB2328A0A0A2B0F2CD53692589FEB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-ChatNote";
-			target = 88D8476FD74675F6CBF2AE93164D2A39 /* Pods-ChatNote */;
+			target = 7B6A37FFFA90E95013FF2FA94C8A6768 /* Pods-ChatNote */;
 			targetProxy = 9924748A44CD74E57627E701B73343F3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0BA9E42A8D786A95631AD907768A93E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDA2F03325FECB0ED15A2866163D5C5C /* Pods-ChatNote.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ChatNote/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ChatNote/Pods-ChatNote.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		247FEDFBC2EBB86204EC40EEF7002DD8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7560F1BDC5BB3E8172D4CB9D8B5DD77C /* Pods-ChatNoteTests.release.xcconfig */;
@@ -482,6 +634,41 @@
 			};
 			name = Release;
 		};
+		799F9EC53099E9EC81720F3C6FEE503A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17F23B117793B3E73017BF55E9B62D04 /* KeyboardWrapper.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KeyboardWrapper/KeyboardWrapper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KeyboardWrapper/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/KeyboardWrapper/KeyboardWrapper.modulemap";
+				PRODUCT_MODULE_NAME = KeyboardWrapper;
+				PRODUCT_NAME = KeyboardWrapper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		858D01EEFE984249A9581D18DBEA53F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -548,6 +735,42 @@
 			};
 			name = Debug;
 		};
+		93F620F22A13822839360A40FEE37B29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17F23B117793B3E73017BF55E9B62D04 /* KeyboardWrapper.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KeyboardWrapper/KeyboardWrapper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KeyboardWrapper/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/KeyboardWrapper/KeyboardWrapper.modulemap";
+				PRODUCT_MODULE_NAME = KeyboardWrapper;
+				PRODUCT_NAME = KeyboardWrapper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		94169DECB4BFA2F3B80AD43CCE2D8335 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C1036BE53BDE8644B2DCD0B435749A2A /* Pods-ChatNoteUITests.debug.xcconfig */;
@@ -572,81 +795,6 @@
 				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ChatNoteUITests/Pods-ChatNoteUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		9BDFB6C452C0D424F0DD85994A9BF3AB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BA7F2B46CB961E1D483565D07E764CF5 /* Pods-ChatNote.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ChatNote/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ChatNote/Pods-ChatNote.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		A5E0E924587A7104058D40383413E66B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FDA2F03325FECB0ED15A2866163D5C5C /* Pods-ChatNote.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ChatNote/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ChatNote/Pods-ChatNote.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -735,6 +883,44 @@
 			};
 			name = Release;
 		};
+		FBCC412A8B78EF926932BFAC5DCCF0EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA7F2B46CB961E1D483565D07E764CF5 /* Pods-ChatNote.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ChatNote/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ChatNote/Pods-ChatNote.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -743,15 +929,6 @@
 			buildConfigurations = (
 				858D01EEFE984249A9581D18DBEA53F1 /* Debug */,
 				5DE19CECB206ACCCACF04D62F93FFDA6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		48F364EFC660934F7A20F7CD7491D73B /* Build configuration list for PBXNativeTarget "Pods-ChatNote" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A5E0E924587A7104058D40383413E66B /* Debug */,
-				9BDFB6C452C0D424F0DD85994A9BF3AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -770,6 +947,24 @@
 			buildConfigurations = (
 				94169DECB4BFA2F3B80AD43CCE2D8335 /* Debug */,
 				D84EFD5D153CB95A72E90A84EE881A88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A1C3C387845161537010BAE06E9ED24 /* Build configuration list for PBXNativeTarget "KeyboardWrapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				799F9EC53099E9EC81720F3C6FEE503A /* Debug */,
+				93F620F22A13822839360A40FEE37B29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E26ED9DD461E9000B109700200040545 /* Build configuration list for PBXNativeTarget "Pods-ChatNote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BA9E42A8D786A95631AD907768A93E8 /* Debug */,
+				FBCC412A8B78EF926932BFAC5DCCF0EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1BCA358DF3BDEE7D51888568F47649DC"
-               BlueprintName = "Pods-ChatNoteTests"
+               BlueprintIdentifier = "5CCAD385628B901C38E8267F20968D16"
+               BlueprintName = "KeyboardWrapper"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "Pods-ChatNoteTests.framework">
+               BuildableName = "KeyboardWrapper.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

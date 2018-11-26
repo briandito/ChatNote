@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0AD14CDA21AAB3B2001DCBAB /* UITextFieldPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD14CD921AAB3B2001DCBAB /* UITextFieldPadding.swift */; };
 		0AD3A21821AA63870034505B /* newMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3A21621AA63870034505B /* newMessageCell.swift */; };
 		0AD3A21921AA63870034505B /* newMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD3A21721AA63870034505B /* newMessageCell.xib */; };
 		0AEAE33721A000E5003A5711 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEAE33621A000E5003A5711 /* Message.swift */; };
@@ -41,7 +40,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0AD14CD921AAB3B2001DCBAB /* UITextFieldPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldPadding.swift; sourceTree = "<group>"; };
 		0AD3A21621AA63870034505B /* newMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newMessageCell.swift; sourceTree = "<group>"; };
 		0AD3A21721AA63870034505B /* newMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = newMessageCell.xib; sourceTree = "<group>"; };
 		0AEAE33621A000E5003A5711 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -120,7 +118,6 @@
 			children = (
 				D3B821A2219D014400BD16EC /* AppDelegate.swift */,
 				D3B821A4219D014400BD16EC /* ViewController.swift */,
-				0AD14CD921AAB3B2001DCBAB /* UITextFieldPadding.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -220,6 +217,7 @@
 				D3B8219B219D014400BD16EC /* Sources */,
 				D3B8219C219D014400BD16EC /* Frameworks */,
 				D3B8219D219D014400BD16EC /* Resources */,
+				D2FF7CD6AA9FD7B989554422 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -384,6 +382,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D2FF7CD6AA9FD7B989554422 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ChatNote/Pods-ChatNote-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KeyboardWrapper/KeyboardWrapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeyboardWrapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChatNote/Pods-ChatNote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F31E76E5B045902AD79F2AF7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -417,7 +437,6 @@
 				0AEAE33721A000E5003A5711 /* Message.swift in Sources */,
 				0AD3A21821AA63870034505B /* newMessageCell.swift in Sources */,
 				D3B821A3219D014400BD16EC /* AppDelegate.swift in Sources */,
-				0AD14CDA21AAB3B2001DCBAB /* UITextFieldPadding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

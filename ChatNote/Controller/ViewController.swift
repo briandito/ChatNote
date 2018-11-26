@@ -18,7 +18,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var keyboardHeight: CGFloat!
     
     //MARK: iboutlets links
-    @IBOutlet var messageTextField: UITextField!
+    
+    //textfield style
+    @IBOutlet var messageTextField: UITextField! {
+        didSet {
+            messageTextField.layer.cornerRadius =  17
+            let leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 10.0, height: 8.0))
+            messageTextField.leftView = leftView
+            messageTextField.leftViewMode = .always
+        }
+    }
+    
     @IBOutlet var messageTableView: UITableView!
     @IBOutlet var heightConstraint: NSLayoutConstraint!
     

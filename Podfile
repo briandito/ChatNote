@@ -5,6 +5,7 @@ target 'ChatNote' do
   use_frameworks!
 
   # Pods for ChatNote
+  pod 'KeyboardWrapper', '~> 4.1'
 
   target 'ChatNoteTests' do
     inherit! :search_paths

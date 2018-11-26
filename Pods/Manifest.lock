@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: a0f4f0c8df63de7c37423c5b6d90bcb5e28aa849
+PODS:
+  - KeyboardWrapper (4.1.0)
+
+DEPENDENCIES:
+  - KeyboardWrapper (~> 4.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - KeyboardWrapper
+
+SPEC CHECKSUMS:
+  KeyboardWrapper: a494dd0b33a6e36beb35a5664617304a83de1fe8
+
+PODFILE CHECKSUM: 58b72d98cb9c93e06f314296a3e523164f991e7a
 
 COCOAPODS: 1.5.3
