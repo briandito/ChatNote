@@ -11,12 +11,6 @@ import KeyboardWrapper
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, KeyboardWrapperDelegate {
 
-    //MARK: declare instance variables
-//    var messageArray: [Message] = [Message]()
-
-    var activeField: UITextField?
-    var lastOffset: CGPoint!
-    var keyboardHeight: CGFloat!
     var keyboardWrapper: KeyboardWrapper?
 
     
@@ -31,6 +25,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             messageTextField.leftViewMode = .always
         }
     }
+    
+    @IBOutlet var composeMessageView: UIView!
     
     @IBOutlet var messageTableView: UITableView!
     @IBOutlet var heightConstraint: NSLayoutConstraint!
