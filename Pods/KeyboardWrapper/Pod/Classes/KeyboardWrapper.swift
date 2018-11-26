@@ -17,10 +17,11 @@ open class KeyboardWrapper {
     /// Creates a new instance of `KeyboardWrapper` and adds itself as observer for `UIKeyboard` notifications.
     public init() {
         let center = NotificationCenter.default
-        center.addObserver(self, selector: #selector(keyboardWillShowNotification), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        center.addObserver(self, selector: #selector(keyboardDidShowNotification), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
-        center.addObserver(self, selector: #selector(keyboardWillHideNotification), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-        center.addObserver(self, selector: #selector(keyboardDidHideNotification), name: NSNotification.Name.UIKeyboardDidHide, object: nil)
+        center.addObserver(self, selector: #selector(keyboardWillShowNotification), name: UIResponder.keyboardWillShowNotification, object: nil)
+        center.addObserver(self, selector: #selector(keyboardDidShowNotification), name: UIResponder.keyboardDidShowNotification, object: nil)
+        center.addObserver(self, selector: #selector(keyboardWillHideNotification), name: UIResponder.keyboardWillHideNotification, object: nil)
+        center.addObserver(self, selector: #selector(keyboardDidHideNotification), name: UIResponder.keyboardDidHideNotification, object: nil)
+        
     }
 
     /// Creates a new instance of `KeyboardWrapper`, adds itself as observer for `UIKeyboard` notifications and
@@ -91,19 +92,19 @@ public struct KeyboardInfo {
 
     /// Defines how the keyboard will be animated onto or off the screen.
     /// Corresponds to `UIKeyboardAnimationCurveUserInfoKey`.
-    public let animationCurve: UIViewAnimationCurve
+    public let animationCurve: UIView.AnimationCurve
 
     /// The duration of the animation in seconds.
     /// Corresponds to `UIKeyboardAnimationDurationUserInfoKey`.
     public let animationDuration: TimeInterval
 
     /// Options for animating constructed from `animationCurve` property.
-    public var animationOptions: UIViewAnimationOptions {
+    public var animationOptions: UIView.AnimationOptions {
         switch animationCurve {
-        case .easeInOut: return UIViewAnimationOptions.curveEaseInOut
-        case .easeIn: return UIViewAnimationOptions.curveEaseIn
-        case .easeOut: return UIViewAnimationOptions.curveEaseOut
-        case .linear: return UIViewAnimationOptions.curveLinear
+        case .easeInOut: return UIView.AnimationOptions.curveEaseInOut
+        case .easeIn: return UIView.AnimationOptions.curveEaseIn
+        case .easeOut: return UIView.AnimationOptions.curveEaseOut
+        case .linear: return UIView.AnimationOptions.curveLinear
         }
     }
 }
@@ -113,14 +114,14 @@ public extension KeyboardInfo {
     /// If there is no info or `info` doesn't contain appropriate key-value pair uses default values.
     init(info: [AnyHashable: Any]?, state: KeyboardState) {
         self.state = state
-        self.beginFrame = (info?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue ?? CGRect.zero
-        self.endFrame = (info?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue ?? CGRect.zero
-        let animationCurveRaw = info?[UIKeyboardAnimationCurveUserInfoKey] as? Int ?? 0
+        self.beginFrame = (info?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue ?? CGRect.zero
+        self.endFrame = (info?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue ?? CGRect.zero
+        let animationCurveRaw = info?[UIResponder.keyboardAnimationCurveUserInfoKey] as? Int ?? 0
         if animationCurveRaw == 7 {
             self.animationCurve = .easeInOut
         } else {
-            self.animationCurve = UIViewAnimationCurve(rawValue: animationCurveRaw) ?? .easeInOut
+            self.animationCurve = UIView.AnimationCurve(rawValue: animationCurveRaw) ?? .easeInOut
         }
-        self.animationDuration = TimeInterval(info?[UIKeyboardAnimationDurationUserInfoKey] as? Double ?? 0.0)
+        self.animationDuration = TimeInterval(info?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double ?? 0.0)
     }
 }

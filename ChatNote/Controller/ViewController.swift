@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import KeyboardWrapper
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, KeyboardWrapperDelegate {
 
     //MARK: declare instance variables
 //    var messageArray: [Message] = [Message]()
@@ -16,6 +17,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var activeField: UITextField?
     var lastOffset: CGPoint!
     var keyboardHeight: CGFloat!
+    var keyboardWrapper: KeyboardWrapper?
+
     
     //MARK: iboutlets links
     
@@ -31,10 +34,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet var messageTableView: UITableView!
     @IBOutlet var heightConstraint: NSLayoutConstraint!
+    @IBOutlet var bottomConstraint: NSLayoutConstraint!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        keyboardWrapper = KeyboardWrapper(delegate: self)
         
         //MARK: set controller as delegate and datasource
         messageTableView.delegate = self
@@ -181,6 +187,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         configureTableView()
         messageTableView.reloadData()
+    }
+    
+    func keyboardWrapper(_ wrapper: KeyboardWrapper, didChangeKeyboardInfo info: KeyboardInfo) {
+        
+        if info.state == .willShow || info.state == .visible {
+            heightConstraint.constant = info.endFrame.size.height + 52
+        } else {
+            heightConstraint.constant = 52
+        }
+        
+        view.layoutIfNeeded()
     }
 }
 
