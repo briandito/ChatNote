@@ -12,7 +12,6 @@ import KeyboardWrapper
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, KeyboardWrapperDelegate {
 
     var keyboardWrapper: KeyboardWrapper?
-
     
     //MARK: iboutlets links
     
@@ -53,6 +52,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         //MARK: Table UI fixes
         messageTableView.separatorStyle = .none
+        
+        //MARK: scroll to bottom at launch
+        scrollToBottom()
     }
     
     /////////////////////////////////////
@@ -64,7 +66,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "newMessageCell", for: indexPath) as! newMessageCell
         
-        let messageArray = ["When a customer is having a haircut, some shops might have these small screens which shows ads, tv shows, or the shop's own commercial videos. How can we entertain her/him for at least 10 minutes using this small screen? How can we make the experience delightful and enjoyable in the 10 minutes window?", "ut, some shops might have these small screens which shows ads, tv shows, or the shop's own commercial videos. How can we entertain her/him for kezia balobo", "third meis small screen? How  ssage"]
+        let messageArray = ["third meis small screen? How  ssage", "When a customer is having a haircut, some shops might have these small screens which shows ads, tv shows, or the shop's own commercial videos. How can we entertain her/him for at least 10 minutes using this small screen? How can we make the experience delightful and enjoyable in the 10 minutes window?", "ut, some shops might have these small screens which shows ads, tv shows, or the shop's own commercial videos. How can we entertain her/him for kezia balobo", "When a customer is having a haircut, some shops might have these small screens which shows ads, tv shows, or the shop's own commercial videos. How can we entertain her/him for at least 10 minutes using this small screen? How can we make the experience delightful and enjoyable in the 10 minutes window?", "ut, some shops might have these small screens which shows ads, tv shows, or the shop's own commercial videos. How can we entertain her/him for kezia balobo", "third meis small screen? How  ssage"]
         
         cell.newMessageDate.text = getDateAndTime()
         cell.newMessageBody.text = messageArray[indexPath.row]
@@ -86,7 +88,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
 //      return messageArray.count
-        return 3
+        return 6
     }
     
     //TODO: Declare tableViewTapped here:
@@ -120,36 +122,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         dateAndTime = formatter.string(from: currentDateTime)
         
         return dateAndTime
-    }
-    
-    ///////////////////////////////////////////
-    
-    //MARK:- TextField Delegate Methods
-    
-    
-    //TODO: Declare textFieldDidBeginEditing here:
-    
-    
-    func textFieldDidBeginEditing(_ textField: UITextField){
-        
-//        //animation
-//        UIView.animate(withDuration: 0.25) {
-//            self.heightConstraint.constant = 308
-//            self.view.layoutIfNeeded()
-//        }
-        
-    }
-    
-    
-    //TODO: Declare textFieldDidEndEditing here:
-    func textFieldDidEndEditing(_ textField: UITextField){
-        
-//        //animation
-//        UIView.animate(withDuration: 0.25) {
-//            self.heightConstraint.constant = 52
-//            self.view.layoutIfNeeded()
-//        }
-
     }
     
     ///////////////////////////////////////////
@@ -188,12 +160,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func keyboardWrapper(_ wrapper: KeyboardWrapper, didChangeKeyboardInfo info: KeyboardInfo) {
         
         if info.state == .willShow || info.state == .visible {
-            heightConstraint.constant = info.endFrame.size.height + 52
+            
+            
+            scrollToBottom()
+            bottomConstraint.constant = info.endFrame.size.height * -1
+            
         } else {
-            heightConstraint.constant = 52
+            bottomConstraint.constant = 0
         }
         
         view.layoutIfNeeded()
+    }
+    
+    func scrollToBottom(){
+        let numberOfRows: Int = messageTableView.numberOfRows(inSection: 0)
+        let itemForIndexPath: Int = numberOfRows - 1
+        let indexPath = NSIndexPath(item: itemForIndexPath, section: 0)
+        messageTableView.scrollToRow(at: indexPath as IndexPath, at: UITableView.ScrollPosition.bottom, animated: true)
     }
 }
 

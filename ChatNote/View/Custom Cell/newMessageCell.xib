@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FvQ-vY-pyI">
-                        <rect key="frame" x="8" y="6" width="304" height="83.5"/>
+                        <rect key="frame" x="8" y="0.0" width="304" height="83.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZON-ei-1E4">
                                 <rect key="frame" x="8" y="34" width="288" height="41.5"/>
@@ -56,8 +56,8 @@
                 <constraints>
                     <constraint firstItem="FvQ-vY-pyI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="lXZ-aA-uos"/>
                     <constraint firstAttribute="trailing" secondItem="FvQ-vY-pyI" secondAttribute="trailing" constant="8" id="tw5-wH-9bw"/>
-                    <constraint firstItem="FvQ-vY-pyI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="txH-gn-a9r"/>
-                    <constraint firstAttribute="bottom" secondItem="FvQ-vY-pyI" secondAttribute="bottom" constant="6" id="w9Y-2N-NhS"/>
+                    <constraint firstItem="FvQ-vY-pyI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="txH-gn-a9r"/>
+                    <constraint firstAttribute="bottom" secondItem="FvQ-vY-pyI" secondAttribute="bottom" constant="12" id="w9Y-2N-NhS"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
