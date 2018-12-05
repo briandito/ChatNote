@@ -14,7 +14,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     var keyboardWrapper: KeyboardWrapper?
     var messages: [Message] = []
-    var note: [NSManagedObject] = []
+    var notebook: [NSManagedObject] = []
     
     //MARK: iboutlets links
     
@@ -57,22 +57,45 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         messageTableView.separatorStyle = .none
         
         //MARK: scroll to bottom at launch
-        scrollToBottom()
+//        scrollToBottom()
     }
     
-    /////////////////////////////////////
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //1
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+        
+        //2
+        let fetchRequest =
+            NSFetchRequest<NSManagedObject>(entityName: "Messages")
+        
+        //3
+        do {
+            notebook = try managedContext.fetch(fetchRequest)
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+    }
+
     
     //MARK: Tableview data source methods
     
     //TODO: declare cellforRowat indexpath
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let note = notebook[indexPath.row]
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "newMessageCell", for: indexPath) as! newMessageCell
         
-        let messageArray = ["third meis small screen? How  ssage", "When a customer is having a haircut, some shops might have these small screens which shows ads, tv shows, or the shop's own commercial videos. How can we entertain her/him for at least 10 minutes using this small screen? How can we make the experience delightful and enjoyable in the 10 minutes window?", "ut, some shops might have these small screens which shows ads, tv shows, or the shop's own commercial videos. How can we entertain her/him for kezia balobo", "When a customer is having a haircut, some shops might have these small screens which shows ads, tv shows, or the shop's own commercial videos. How can we entertain her/him for at least 10 minutes using this small screen? How can we make the experience delightful and enjoyable in the 10 minutes window?", "ut, some shops might have these small screens which shows ads, tv shows, or the shop's own commercial videos. How can we entertain her/him for kezia balobo", "third meis small screen? How  ssage"]
-        
-        cell.newMessageDate.text = getDateAndTime()
-        cell.newMessageBody.text = messageArray[indexPath.row]
+        cell.newMessageBody?.text = note.value(forKeyPath: "messageBody") as? String
+        cell.newMessageDate?.text = note.value(forKeyPath: "messageDate") as? String
         
         //MARK: set line height
         let paragraphStyle = NSMutableParagraphStyle()
@@ -89,9 +112,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     //TODO: Declare numberOfRowsInSection here:
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-//      return messageArray.count
-        return 6
+      return notebook.count
     }
     
     //TODO: Declare tableViewTapped here:
@@ -145,10 +166,38 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         print(message.date)
         print(message.messageBody)
         
-//        self.messageArray.append(message)
-//        print(messageArray.last?.messageBody)
+        save(date: message.date, messageBody:message.messageBody)
+        messageTableView.reloadData()
         
         messageTextField.text = ""
+    }
+    
+    func save(date: String, messageBody: String) {
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        //1
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        //2
+        let entity = NSEntityDescription.entity(forEntityName: "Messages", in: managedContext)!
+        
+        let messages = NSManagedObject(entity: entity, insertInto: managedContext)
+        
+        //3
+        messages.setValue(messageBody, forKeyPath: "messageBody")
+        messages.setValue(date, forKeyPath: "messageDate")
+        
+        //4
+        do {
+            try managedContext.save()
+            notebook.append(messages)
+        } catch let error as NSError {
+            print("Could not save \(error), \(error.userInfo)")
+        }
+        
     }
     
     //MARK: Create the retrieveMessages method here:
@@ -165,7 +214,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if info.state == .willShow || info.state == .visible {
             
             
-            scrollToBottom()
+//            scrollToBottom()
             bottomConstraint.constant = info.endFrame.size.height * -1
             
         } else {
@@ -175,11 +224,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         view.layoutIfNeeded()
     }
     
-    func scrollToBottom(){
-        let numberOfRows: Int = messageTableView.numberOfRows(inSection: 0)
-        let itemForIndexPath: Int = numberOfRows - 1
-        let indexPath = NSIndexPath(item: itemForIndexPath, section: 0)
-        messageTableView.scrollToRow(at: indexPath as IndexPath, at: UITableView.ScrollPosition.bottom, animated: true)
-    }
+//    func scrollToBottom(){
+//        let numberOfRows: Int = messageTableView.numberOfRows(inSection: 0)
+//        let itemForIndexPath: Int = numberOfRows - 1
+//        let indexPath = NSIndexPath(item: itemForIndexPath, section: 0)
+//        messageTableView.scrollToRow(at: indexPath as IndexPath, at: UITableView.ScrollPosition.bottom, animated: true)
+//    }
 }
 
