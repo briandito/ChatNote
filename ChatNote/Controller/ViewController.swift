@@ -170,6 +170,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         messageTableView.reloadData()
         
         messageTextField.text = ""
+//        scrollToBottom()
     }
     
     func save(date: String, messageBody: String) {
@@ -224,11 +225,5 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         view.layoutIfNeeded()
     }
     
-//    func scrollToBottom(){
-//        let numberOfRows: Int = messageTableView.numberOfRows(inSection: 0)
-//        let itemForIndexPath: Int = numberOfRows - 1
-//        let indexPath = NSIndexPath(item: itemForIndexPath, section: 0)
-//        messageTableView.scrollToRow(at: indexPath as IndexPath, at: UITableView.ScrollPosition.bottom, animated: true)
-//    }
 }
 
