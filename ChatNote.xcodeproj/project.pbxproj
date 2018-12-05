@@ -13,6 +13,7 @@
 		39C06EE79D5D93D245CF610F /* Pods_ChatNoteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807FF94E5792831A32AB2F68 /* Pods_ChatNoteUITests.framework */; };
 		4AE11B80C500D70F7EF7FCAC /* Pods_ChatNote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F30275A14212CF865F8E35 /* Pods_ChatNote.framework */; };
 		679783074D5F1B0CFE792D34 /* Pods_ChatNoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F33ADDB3A04C9DE04A741E0 /* Pods_ChatNoteTests.framework */; };
+		D33751D721B7CD3C00738144 /* Messages.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D33751D521B7CD3C00738144 /* Messages.xcdatamodeld */; };
 		D3B821A3219D014400BD16EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B821A2219D014400BD16EC /* AppDelegate.swift */; };
 		D3B821A5219D014400BD16EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B821A4219D014400BD16EC /* ViewController.swift */; };
 		D3B821A8219D014400BD16EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3B821A6219D014400BD16EC /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		807FF94E5792831A32AB2F68 /* Pods_ChatNoteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatNoteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEB839FC072D182DAF774BB9 /* Pods-ChatNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatNote.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatNote/Pods-ChatNote.release.xcconfig"; sourceTree = "<group>"; };
 		C3AB55D66B3829E987A1C63D /* Pods-ChatNoteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatNoteUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatNoteUITests/Pods-ChatNoteUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D33751D621B7CD3C00738144 /* Messages.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Messages.xcdatamodel; sourceTree = "<group>"; };
 		D3B8219F219D014400BD16EC /* ChatNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B821A2219D014400BD16EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3B821A4219D014400BD16EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			children = (
 				D3B821A2219D014400BD16EC /* AppDelegate.swift */,
 				D3B821A4219D014400BD16EC /* ViewController.swift */,
+				D33751D521B7CD3C00738144 /* Messages.xcdatamodeld */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 			files = (
 				D3B821A5219D014400BD16EC /* ViewController.swift in Sources */,
 				0AEAE33721A000E5003A5711 /* Message.swift in Sources */,
+				D33751D721B7CD3C00738144 /* Messages.xcdatamodeld in Sources */,
 				0AD3A21821AA63870034505B /* newMessageCell.swift in Sources */,
 				D3B821A3219D014400BD16EC /* AppDelegate.swift in Sources */,
 			);
@@ -777,6 +781,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D33751D521B7CD3C00738144 /* Messages.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D33751D621B7CD3C00738144 /* Messages.xcdatamodel */,
+			);
+			currentVersion = D33751D621B7CD3C00738144 /* Messages.xcdatamodel */;
+			path = Messages.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D3B82197219D014400BD16EC /* Project object */;
 }

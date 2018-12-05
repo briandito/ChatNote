@@ -8,10 +8,13 @@
 
 import UIKit
 import KeyboardWrapper
+import CoreData
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, KeyboardWrapperDelegate {
 
     var keyboardWrapper: KeyboardWrapper?
+    var messages: [Message] = []
+    var note: [NSManagedObject] = []
     
     //MARK: iboutlets links
     
