@@ -21,7 +21,7 @@ class newMessageCell: UITableViewCell {
         
         //set bg color of the notes
         newMessageBackground.layer.borderWidth = 1
-        newMessageBackground.layer.borderColor = UIColor(red:222/255, green:225/255, blue:227/255, alpha: 0.5).cgColor
+        newMessageBackground.layer.borderColor = UIColor(red:222/255, green:225/255, blue:227/255, alpha: 0.05).cgColor
 
     }
     

@@ -24,6 +24,32 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="615"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="58j-DG-ZCP" userLabel="Search Container">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
+                                        <subviews>
+                                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="L9C-P1-mjP">
+                                                <rect key="frame" x="0.0" y="18" width="375" height="56"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="wPc-ge-eQg"/>
+                                                </connections>
+                                            </searchBar>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rjD-oT-PE6" userLabel="Bottom Border">
+                                                <rect key="frame" x="0.0" y="73" width="375" height="1"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="9ze-2d-0xc"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="rjD-oT-PE6" secondAttribute="trailing" id="U87-xs-Sjn"/>
+                                            <constraint firstItem="rjD-oT-PE6" firstAttribute="leading" secondItem="58j-DG-ZCP" secondAttribute="leading" id="ZqG-LW-kCB"/>
+                                            <constraint firstAttribute="bottom" secondItem="rjD-oT-PE6" secondAttribute="bottom" id="pNa-Op-vwq"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ULe-a8-s9S" userLabel="Compose Message">
                                         <rect key="frame" x="0.0" y="615" width="375" height="52"/>
                                         <subviews>
@@ -84,10 +110,14 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="58j-DG-ZCP" firstAttribute="top" secondItem="MZX-dn-koI" secondAttribute="top" id="4qn-hW-msg"/>
                                     <constraint firstAttribute="trailing" secondItem="ULe-a8-s9S" secondAttribute="trailing" id="Eao-CW-0Hf"/>
                                     <constraint firstItem="ULe-a8-s9S" firstAttribute="leading" secondItem="MZX-dn-koI" secondAttribute="leading" id="Nke-FB-z5B"/>
                                     <constraint firstAttribute="trailing" secondItem="MhM-Mg-X0H" secondAttribute="trailing" id="PAV-su-Szj"/>
+                                    <constraint firstItem="58j-DG-ZCP" firstAttribute="leading" secondItem="MZX-dn-koI" secondAttribute="leading" id="Se5-Cs-Da2"/>
+                                    <constraint firstAttribute="bottom" secondItem="58j-DG-ZCP" secondAttribute="bottom" constant="593" id="ViI-7f-P8A"/>
                                     <constraint firstItem="MhM-Mg-X0H" firstAttribute="leading" secondItem="MZX-dn-koI" secondAttribute="leading" id="ddg-PA-AWE"/>
+                                    <constraint firstAttribute="trailing" secondItem="58j-DG-ZCP" secondAttribute="trailing" id="nX1-Fk-Lo5"/>
                                     <constraint firstItem="MhM-Mg-X0H" firstAttribute="top" secondItem="MZX-dn-koI" secondAttribute="top" id="pUL-9O-MHz"/>
                                     <constraint firstAttribute="bottom" secondItem="ULe-a8-s9S" secondAttribute="bottom" id="vjJ-ju-biR"/>
                                     <constraint firstItem="ULe-a8-s9S" firstAttribute="top" secondItem="MhM-Mg-X0H" secondAttribute="bottom" id="ygW-SU-uKG"/>
@@ -109,7 +139,7 @@
                         <outlet property="heightConstraint" destination="UZ4-Vx-TO2" id="nhF-1W-GEx"/>
                         <outlet property="messageTableView" destination="MhM-Mg-X0H" id="Fkb-PN-53t"/>
                         <outlet property="messageTextField" destination="Myq-Qb-fYx" id="qjR-Vt-P3j"/>
-                        <outlet property="searchDisplayController" destination="Ygs-nt-31L" id="aOZ-Kx-INv"/>
+                        <outlet property="searchDisplayController" destination="N8S-aC-k7c" id="P1X-qa-dpY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -119,6 +149,15 @@
                         <outlet property="searchContentsController" destination="BYZ-38-t0r" id="ocF-n0-bLp"/>
                         <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="szQ-ae-VFp"/>
                         <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="wEF-Lu-2SR"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="N8S-aC-k7c">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="ghp-qO-PEi"/>
+                        <outlet property="searchBar" destination="L9C-P1-mjP" id="DOU-bq-aS6"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="gEn-FN-2JX"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="ErD-x9-YXV"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="3n9-gg-acV"/>
                     </connections>
                 </searchDisplayController>
             </objects>
