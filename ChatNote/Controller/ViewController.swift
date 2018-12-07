@@ -31,7 +31,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet var composeMessageView: UIView!
     
     @IBOutlet var messageTableView: UITableView!
-    @IBOutlet var heightConstraint: NSLayoutConstraint!
     @IBOutlet var bottomConstraint: NSLayoutConstraint!
     
     
