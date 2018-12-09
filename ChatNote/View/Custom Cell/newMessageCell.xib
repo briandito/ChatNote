@@ -19,22 +19,22 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FvQ-vY-pyI">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="95.5"/>
+                        <rect key="frame" x="8" y="4" width="304" height="87.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZON-ei-1E4">
-                                <rect key="frame" x="8" y="34" width="304" height="53.5"/>
+                                <rect key="frame" x="8" y="34" width="288" height="45.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="752" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ru-6S-tm4">
-                                <rect key="frame" x="8" y="8" width="304" height="18"/>
+                                <rect key="frame" x="8" y="8" width="288" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.85078660102739723" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ZON-ei-1E4" firstAttribute="top" secondItem="0Ru-6S-tm4" secondAttribute="bottom" constant="8" id="2lY-XE-zAe"/>
                             <constraint firstAttribute="trailing" secondItem="ZON-ei-1E4" secondAttribute="trailing" constant="8" id="4Nc-fx-Zoc"/>
@@ -54,10 +54,10 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="FvQ-vY-pyI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="lXZ-aA-uos"/>
-                    <constraint firstAttribute="trailing" secondItem="FvQ-vY-pyI" secondAttribute="trailing" id="tw5-wH-9bw"/>
-                    <constraint firstItem="FvQ-vY-pyI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="txH-gn-a9r"/>
-                    <constraint firstAttribute="bottom" secondItem="FvQ-vY-pyI" secondAttribute="bottom" id="w9Y-2N-NhS"/>
+                    <constraint firstItem="FvQ-vY-pyI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="lXZ-aA-uos"/>
+                    <constraint firstAttribute="trailing" secondItem="FvQ-vY-pyI" secondAttribute="trailing" constant="8" id="tw5-wH-9bw"/>
+                    <constraint firstItem="FvQ-vY-pyI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="txH-gn-a9r"/>
+                    <constraint firstAttribute="bottom" secondItem="FvQ-vY-pyI" secondAttribute="bottom" constant="4" id="w9Y-2N-NhS"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

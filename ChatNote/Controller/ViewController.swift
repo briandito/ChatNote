@@ -56,8 +56,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //MARK: Table UI fixes
         messageTableView.separatorStyle = .none
         
-        //MARK: scroll to bottom at launch
-//        scrollToBottom()
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -96,6 +96,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         cell.newMessageBody?.text = note.value(forKeyPath: "messageBody") as? String
         cell.newMessageDate?.text = note.value(forKeyPath: "messageDate") as? String
+        cell.selectionStyle = .none
         
         //MARK: set line height
         let paragraphStyle = NSMutableParagraphStyle()
