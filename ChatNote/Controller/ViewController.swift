@@ -56,8 +56,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //MARK: Table UI fixes
         messageTableView.separatorStyle = .none
         
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -225,6 +223,5 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         view.layoutIfNeeded()
     }
-    
 }
 

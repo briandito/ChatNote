@@ -9,6 +9,7 @@
 import UIKit
 
 class newMessageCell: UITableViewCell {
+    
     @IBOutlet var newMessageBody: UILabel!
     
     @IBOutlet var newMessageDate: UILabel!
@@ -18,11 +19,11 @@ class newMessageCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-//        //set border color of the notes
-//        self.newMessageBackground.layer.borderWidth = 0
-//        self.newMessageBackground.layer.borderColor = UIColor(red:0/255, green:0/255, blue:250/255, alpha: 1).cgColor
 
+        //MARK: Cell gesture recognizer
+        let longPressGR = UILongPressGestureRecognizer(target: self, action: #selector(longPressHandler))
+        longPressGR.minimumPressDuration = 0.3 // how long before menu pops up
+        self.addGestureRecognizer(longPressGR)
     }
     
     override func setHighlighted(_ highlighted: Bool, animated: Bool) {
@@ -41,7 +42,49 @@ class newMessageCell: UITableViewCell {
             // cell not tapped
             self.newMessageBackground.backgroundColor = UIColor(red:235/255, green:235/255, blue:235/255, alpha: 0.5)
             self.newMessageBackground.layer.borderWidth = 0
+            self.resignFirstResponder()
         }
     }
+    
+    override var canBecomeFirstResponder: Bool {
+        return true
+    }
+    
+    //MARK: Cell long press handler
+    @objc func longPressHandler(sender: UILongPressGestureRecognizer) {
+        guard sender.state == .began,
+            let senderView = sender.view,
+            let superView = sender.view?.superview
+            else { return }
+        
+        // Make responsiveView the window's first responder
+        senderView.becomeFirstResponder()
+        
+        // Set up the shared UIMenuController
+        let saveMenuItem = UIMenuItem(title: "Save", action: #selector(saveTapped))
+        let deleteMenuItem = UIMenuItem(title: "Delete", action: #selector(deleteTapped))
+        UIMenuController.shared.menuItems = [saveMenuItem, deleteMenuItem]
+        
+        // Tell the menu controller the first responder's frame and its super view
+        UIMenuController.shared.setTargetRect(senderView.frame, in: superView)
+        
+        // Animate the menu onto view
+        UIMenuController.shared.setMenuVisible(true, animated: true)
+    }
+    
+    @objc func saveTapped() {
+        print("save tapped")
+        // ...
+        // This would be a good place to optionally resign
+        // responsiveView's first responder status if you need to
+        self.resignFirstResponder()
+    }
+    
+    @objc func deleteTapped() {
+        print("delete tapped")
+        // ...
+        self.resignFirstResponder()
+    }
+    
     
 }
