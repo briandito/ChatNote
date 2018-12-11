@@ -16,6 +16,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var messages: [Message] = []
     var notebook: [NSManagedObject] = []
     
+    //TODO: create a var to store the index value of currently selected cell. create function to delete the cell based on the index number. refer to: https://stackoverflow.com/questions/28659845/swift-how-to-get-the-indexpath-row-when-a-button-in-a-cell-is-tapped
+    var currentlySelectedCell: Int?
+    
     //MARK: iboutlets links
     
     //textfield style
@@ -47,7 +50,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //MARK: set controller as the delegate of textfield
         messageTextField.delegate = self
         
-        //TODO: Register your MessageCell.xib file here:
+        //MARK: Register your MessageCell.xib file here:
         messageTableView.register(UINib(nibName: "newMessageCell", bundle: nil), forCellReuseIdentifier: "newMessageCell")
         
         configureTableView()
@@ -243,7 +246,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Animate the menu onto view
         UIMenuController.shared.setMenuVisible(true, animated: true)
         
-        print("first responder")
     }
     
     @objc func copyTapped() {
