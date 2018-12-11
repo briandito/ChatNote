@@ -96,6 +96,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.newMessageDate?.text = note.value(forKeyPath: "messageDate") as? String
         cell.selectionStyle = .none
         
+        //Cell gesture recognizer
+        let longPressGR = UILongPressGestureRecognizer(target: self, action: #selector(longPressHandler))
+        longPressGR.minimumPressDuration = 0.3 // how long before menu pops up
+        cell.addGestureRecognizer(longPressGR)
+        
         //MARK: set line height
         let paragraphStyle = NSMutableParagraphStyle()
         
@@ -151,8 +156,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     //MARK: - Send Message as notes
-    
-    
     @IBAction func sendPressed(_ sender: AnyObject) {
         
         messageTextField.endEditing(true)
@@ -169,9 +172,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         messageTableView.reloadData()
         
         messageTextField.text = ""
-//        scrollToBottom()
     }
     
+    //MARK: Saving message to core data
     func save(date: String, messageBody: String) {
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
@@ -201,10 +204,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     //MARK: Create the retrieveMessages method here:
-    
     func retrieveMessages(){
-        
-        
         configureTableView()
         messageTableView.reloadData()
     }
@@ -212,9 +212,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func keyboardWrapper(_ wrapper: KeyboardWrapper, didChangeKeyboardInfo info: KeyboardInfo) {
         
         if info.state == .willShow || info.state == .visible {
-            
-            
-//            scrollToBottom()
+
             bottomConstraint.constant = info.endFrame.size.height * -1
             
         } else {
@@ -222,6 +220,44 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         
         view.layoutIfNeeded()
+    }
+    
+    //MARK: Cell long press handler
+    @objc func longPressHandler(sender: UILongPressGestureRecognizer) {
+        guard sender.state == .began,
+            let senderView = sender.view,
+            let superView = sender.view?.superview
+            else { return }
+        
+        // Make responsiveView the window's first responder
+        senderView.becomeFirstResponder()
+        
+        // Set up the shared UIMenuController
+        let copyMenuItem = UIMenuItem(title: "Copy", action: #selector(copyTapped))
+        let deleteMenuItem = UIMenuItem(title: "Delete", action: #selector(deleteTapped))
+        UIMenuController.shared.menuItems = [copyMenuItem, deleteMenuItem]
+        
+        // Tell the menu controller the first responder's frame and its super view
+        UIMenuController.shared.setTargetRect(senderView.frame, in: superView)
+        
+        // Animate the menu onto view
+        UIMenuController.shared.setMenuVisible(true, animated: true)
+        
+        print("first responder")
+    }
+    
+    @objc func copyTapped() {
+        print("copy tapped")
+        // ...
+        // This would be a good place to optionally resign
+        // responsiveView's first responder status if you need to
+        self.resignFirstResponder()
+    }
+    
+    @objc func deleteTapped() {
+        print("delete tapped")
+        // ...
+        self.resignFirstResponder()
     }
 }
 

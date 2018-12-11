@@ -10,6 +10,10 @@ import UIKit
 
 class newMessageCell: UITableViewCell {
     
+    override var canBecomeFirstResponder: Bool {
+        return true
+    }
+    
     @IBOutlet var newMessageBody: UILabel!
     
     @IBOutlet var newMessageDate: UILabel!
@@ -19,11 +23,6 @@ class newMessageCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
-        //MARK: Cell gesture recognizer
-        let longPressGR = UILongPressGestureRecognizer(target: self, action: #selector(longPressHandler))
-        longPressGR.minimumPressDuration = 0.3 // how long before menu pops up
-        self.addGestureRecognizer(longPressGR)
     }
     
     override func setHighlighted(_ highlighted: Bool, animated: Bool) {
@@ -31,60 +30,24 @@ class newMessageCell: UITableViewCell {
 
         if highlighted == true {
             // cell tapped
-            self.newMessageBackground.backgroundColor = UIColor(red:0/255, green:122/255, blue:255/255, alpha: 0.05)
-            self.newMessageBackground.layer.borderWidth = 1
-            self.newMessageBackground.layer.borderColor = UIColor(red:0/255, green:122/255, blue:255/255, alpha: 1).cgColor
-            
-            // nice color scheme, for future reference.
-            //            self.newMessageBackground.backgroundColor = UIColor(red:0/255, green:0/255, blue:250/255, alpha: 0.05)
-            //            self.newMessageBackground.layer.borderColor = UIColor(red:0/255, green:0/255, blue:250/255, alpha: 1).cgColor
+            isHighlighted()
         } else {
             // cell not tapped
-            self.newMessageBackground.backgroundColor = UIColor(red:235/255, green:235/255, blue:235/255, alpha: 0.5)
-            self.newMessageBackground.layer.borderWidth = 0
-            self.resignFirstResponder()
+            isNotHighlighted()
         }
     }
     
-    override var canBecomeFirstResponder: Bool {
-        return true
+    //change message BG to highlighted color
+    func isHighlighted(){
+        self.newMessageBackground.backgroundColor = UIColor(red:0/255, green:122/255, blue:255/255, alpha: 0.05)
+        self.newMessageBackground.layer.borderWidth = 1
+        self.newMessageBackground.layer.borderColor = UIColor(red:0/255, green:122/255, blue:255/255, alpha: 1).cgColor
     }
     
-    //MARK: Cell long press handler
-    @objc func longPressHandler(sender: UILongPressGestureRecognizer) {
-        guard sender.state == .began,
-            let senderView = sender.view,
-            let superView = sender.view?.superview
-            else { return }
-        
-        // Make responsiveView the window's first responder
-        senderView.becomeFirstResponder()
-        
-        // Set up the shared UIMenuController
-        let saveMenuItem = UIMenuItem(title: "Save", action: #selector(saveTapped))
-        let deleteMenuItem = UIMenuItem(title: "Delete", action: #selector(deleteTapped))
-        UIMenuController.shared.menuItems = [saveMenuItem, deleteMenuItem]
-        
-        // Tell the menu controller the first responder's frame and its super view
-        UIMenuController.shared.setTargetRect(senderView.frame, in: superView)
-        
-        // Animate the menu onto view
-        UIMenuController.shared.setMenuVisible(true, animated: true)
+    //change message BG to default color
+    func isNotHighlighted(){
+        self.newMessageBackground.backgroundColor = UIColor(red:235/255, green:235/255, blue:235/255, alpha: 0.5)
+        self.newMessageBackground.layer.borderWidth = 0
     }
-    
-    @objc func saveTapped() {
-        print("save tapped")
-        // ...
-        // This would be a good place to optionally resign
-        // responsiveView's first responder status if you need to
-        self.resignFirstResponder()
-    }
-    
-    @objc func deleteTapped() {
-        print("delete tapped")
-        // ...
-        self.resignFirstResponder()
-    }
-    
     
 }
