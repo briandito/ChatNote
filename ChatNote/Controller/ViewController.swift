@@ -113,6 +113,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attrString.length))
         cell.newMessageBody.attributedText = attrString
         
+        //actions
+        cell.longPressAction = { sender in
+            // Do whatever you want from your button here.
+        }
+        
         return cell
     }
     
@@ -250,9 +255,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @objc func copyTapped() {
         print("copy tapped")
-        // ...
-        // This would be a good place to optionally resign
-        // responsiveView's first responder status if you need to
+        
         self.resignFirstResponder()
     }
     

@@ -20,9 +20,14 @@ class newMessageCell: UITableViewCell {
     
     @IBOutlet var newMessageBackground: UIView!
     
+    var longPressAction: ((Any) -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    @objc func longPressAction(sender: Any) {
+        self.longPressAction?(sender)
     }
     
     override func setHighlighted(_ highlighted: Bool, animated: Bool) {
