@@ -15,9 +15,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var keyboardWrapper: KeyboardWrapper?
     var messages: [Message] = []
     var notebook: [NSManagedObject] = []
+    var selectedMessage: Int?
+    var copiedMessage: String = ""
+    let pasteboard = UIPasteboard.general
     
     //TODO: create a var to store the index value of currently selected cell. create function to delete the cell based on the index number. refer to: https://stackoverflow.com/questions/28659845/swift-how-to-get-the-indexpath-row-when-a-button-in-a-cell-is-tapped
-    var currentlySelectedCell: Int?
     
     //MARK: iboutlets links
     
@@ -113,10 +115,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attrString.length))
         cell.newMessageBody.attributedText = attrString
         
-        //actions
-        cell.longPressAction = { sender in
-            // Do whatever you want from your button here.
-        }
+//        //actions
+//        cell.longPressAction = { sender in
+//            cell.
+//        }
         
         return cell
     }
@@ -172,6 +174,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
         message.date = getDateAndTime()
         message.messageBody = messageTextField.text!
+
         
         print(message.date)
         print(message.messageBody)
@@ -251,17 +254,37 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Animate the menu onto view
         UIMenuController.shared.setMenuVisible(true, animated: true)
         
+        if sender.state == UIGestureRecognizer.State.began {
+            
+            let touchPoint = sender.location(in: self.view)
+            if let indexPath = messageTableView.indexPathForRow(at: touchPoint) {
+
+                selectedMessage = indexPath.row - 1
+                
+            }
+        }
+        
     }
+    
+    
     
     @objc func copyTapped() {
         print("copy tapped")
+        let messageIndexPath: IndexPath = [0,selectedMessage!]
+        
+        // Get the cell
+        let cell = messageTableView.cellForRow(at: messageIndexPath) as! newMessageCell
+        
+        //if doorTextField is not empty assign value to clipboard
+        pasteboard.string = cell.newMessageBody.text
         
         self.resignFirstResponder()
     }
     
     @objc func deleteTapped() {
         print("delete tapped")
-        // ...
+        
+        
         self.resignFirstResponder()
     }
 }
