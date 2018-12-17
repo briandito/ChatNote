@@ -271,12 +271,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @objc func copyTapped() {
         print("copy tapped")
         let messageIndexPath: IndexPath = [0,selectedMessage!]
+        print(messageIndexPath)
         
         // Get the cell
-        let cell = messageTableView.cellForRow(at: messageIndexPath) as! newMessageCell
+        let cell = messageTableView.cellForRow(at: messageIndexPath) as? newMessageCell
         
-        //if doorTextField is not empty assign value to clipboard
-        pasteboard.string = cell.newMessageBody.text
+        if (cell != nil){
+            
+            //if doorTextField is not empty assign value to clipboard
+            pasteboard.string = cell!.newMessageBody.text
+            
+        }
         
         self.resignFirstResponder()
     }
