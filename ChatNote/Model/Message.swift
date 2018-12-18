@@ -12,5 +12,6 @@ class Message {
     
     var date: String = ""
     var messageBody: String = ""
+    var identifier: Int = 0
     
 }

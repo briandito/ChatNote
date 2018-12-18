@@ -115,17 +115,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attrString.length))
         cell.newMessageBody.attributedText = attrString
         
-//        //actions
-//        cell.longPressAction = { sender in
-//            cell.
-//        }
-        
         return cell
     }
     
     
     //TODO: Declare numberOfRowsInSection here:
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+      print(notebook.count)
       return notebook.count
     }
     
@@ -174,8 +170,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
         message.date = getDateAndTime()
         message.messageBody = messageTextField.text!
+        message.identifier = notebook.count
 
-        
         print(message.date)
         print(message.messageBody)
         
@@ -260,8 +256,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             if let indexPath = messageTableView.indexPathForRow(at: touchPoint) {
 
                 selectedMessage = indexPath.row - 1
-                
+
             }
+            
         }
         
     }
