@@ -19,8 +19,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var copiedMessage: String = ""
     let pasteboard = UIPasteboard.general
     
-    //TODO: create a var to store the index value of currently selected cell. create function to delete the cell based on the index number. refer to: https://stackoverflow.com/questions/28659845/swift-how-to-get-the-indexpath-row-when-a-button-in-a-cell-is-tapped
-    
     //MARK: iboutlets links
     
     //textfield style
@@ -100,11 +98,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.newMessageBody?.text = note.value(forKeyPath: "messageBody") as? String
         cell.newMessageDate?.text = note.value(forKeyPath: "messageDate") as? String
         cell.selectionStyle = .none
-        
-        //Cell gesture recognizer
-        let longPressGR = UILongPressGestureRecognizer(target: self, action: #selector(longPressHandler))
-        longPressGR.minimumPressDuration = 0.3 // how long before menu pops up
-        cell.addGestureRecognizer(longPressGR)
         
         //MARK: set line height
         let paragraphStyle = NSMutableParagraphStyle()
@@ -227,67 +220,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         
         view.layoutIfNeeded()
-    }
-    
-    //MARK: Cell long press handler
-    @objc func longPressHandler(sender: UILongPressGestureRecognizer) {
-        guard sender.state == .began,
-            let senderView = sender.view,
-            let superView = sender.view?.superview
-            else { return }
-        
-        // Make responsiveView the window's first responder
-        senderView.becomeFirstResponder()
-        
-        // Set up the shared UIMenuController
-        let copyMenuItem = UIMenuItem(title: "Copy", action: #selector(copyTapped))
-        let deleteMenuItem = UIMenuItem(title: "Delete", action: #selector(deleteTapped))
-        UIMenuController.shared.menuItems = [copyMenuItem, deleteMenuItem]
-        
-        // Tell the menu controller the first responder's frame and its super view
-        UIMenuController.shared.setTargetRect(senderView.frame, in: superView)
-        
-        // Animate the menu onto view
-        UIMenuController.shared.setMenuVisible(true, animated: true)
-        
-        if sender.state == UIGestureRecognizer.State.began {
-            
-            let touchPoint = sender.location(in: self.view)
-            if let indexPath = messageTableView.indexPathForRow(at: touchPoint) {
-
-                selectedMessage = indexPath.row - 1
-
-            }
-            
-        }
-        
-    }
-    
-    
-    
-    @objc func copyTapped() {
-        print("copy tapped")
-        let messageIndexPath: IndexPath = [0,selectedMessage!]
-        print(messageIndexPath)
-        
-        // Get the cell
-        let cell = messageTableView.cellForRow(at: messageIndexPath) as? newMessageCell
-        
-        if (cell != nil){
-            
-            //if doorTextField is not empty assign value to clipboard
-            pasteboard.string = cell!.newMessageBody.text
-            
-        }
-        
-        self.resignFirstResponder()
-    }
-    
-    @objc func deleteTapped() {
-        print("delete tapped")
-        
-        
-        self.resignFirstResponder()
     }
 }
 
